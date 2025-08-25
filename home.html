@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tawhidul Hasan</title>
+    <meta name="description" content="Tawhidul Hasan - Computer Science & Engineering Student at KUET. Competitive programmer, software developer, and tech enthusiast showcasing projects and achievements.">
+    <meta name="keywords" content="Tawhidul Hasan, KUET, Computer Science, Software Developer, Competitive Programming, Portfolio">
+    <title>Tawhidul Hasan - Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- HEADER SECTION -->
     <header class="header">
         <nav class="navigation-bar">
@@ -20,7 +25,7 @@
                 </div>
                 <div class="navigation-menu">
                     <a href="#home" class="navigation-link">HOME</a>
-                    <a href="#about" class="navigation-link">ABOUT</a>
+                    <a href="#aboutme" class="navigation-link">ABOUT</a>
                     <a href="#skills" class="navigation-link">SKILLS</a>
                     <a href="#projects" class="navigation-link">PROJECTS</a>
                     <a href="#contact" class="navigation-link">CONTACT</a>
@@ -30,14 +35,15 @@
     </header>
 
     <!--PERSONAL INFO SECTION-->
-    <section id="home" class="personal-info">
+    <main id="main-content">
+        <section id="home" class="personal-info">
         <div class="container">
             <div class="personal-details">
                 <span class="greeting">Hello, I'm</span>
                 <h1 class="personal-name">Tawhidul Hasan<br>A <span class="personal-info-typewriter"></span></h1>
                 <div class="button-container">
-                    <button class="btn-download-cv">Download CV</button>
-                    <button class="btn-contact-info">Contact Me</button>
+                    <button type="button" class="btn-download-cv">Download CV</button>
+                    <button type="button" class="btn-contact-info">Contact Me</button>
                 </div>
                 <div class="social-links">
                     <a href="https://www.facebook.com/tawhidul.hasan.792/" target="_blank" class="social-icon">
@@ -145,7 +151,7 @@
     </section>
 
     <!-- SKILLS SECTION -->
-    <section id="about" class="about">
+    <section id="skills" class="about">
         <div class="container">
             <div class="about-content">
                 <div class="skills-section">
@@ -277,7 +283,7 @@
                         <div class="contact-info-list">
                             <div class="contact-info-item">
                                 <div class="contact-icon">
-                                    <span>👤</span>
+                                    <i class="fas fa-user"></i>
                                 </div>
                                 <div class="contact-details">
                                     <h4>Name</h4>
@@ -287,7 +293,7 @@
                             
                             <div class="contact-info-item">
                                 <div class="contact-icon">
-                                    <span>📍</span>
+                                    <i class="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div class="contact-details">
                                     <h4>Address</h4>
@@ -297,11 +303,21 @@
                             
                             <div class="contact-info-item">
                                 <div class="contact-icon">
-                                    <span>✉️</span>
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Permanent Address</h4>
+                                    <p>8/4 Block-E, Mirpur-12, Dhaka</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
                                 <div class="contact-details">
                                     <h4>Email</h4>
-                                    <p>tawhidul.hasan@example.com<br>tawhid.cse@kuet.ac.bd</p>
+                                    <p>ttawhid401@email.com<br>hasan2107004@stud.kuet.ac.bd</p>
                                 </div>
                             </div>
                         </div>
@@ -311,18 +327,40 @@
                         <h3>Message me</h3>
                         <form class="contact-form">
                             <div class="form-row">
-                                <input type="text" placeholder="Name" class="form-input">
-                                <input type="email" placeholder="Email" class="form-input">
+                                <input type="text" placeholder="Name" class="form-input" name="name" required>
+                                <input type="email" placeholder="Email" class="form-input" name="email" required>
                             </div>
-                            <input type="text" placeholder="Subject" class="form-input full-width">
-                            <textarea placeholder="Message.." class="form-textarea"></textarea>
+                            <input type="text" placeholder="Subject" class="form-input full-width" name="subject" required>
+                            <textarea placeholder="Message.." class="form-textarea" name="message" required></textarea>
                             <button type="submit" class="btn-send">Send message</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-signature">
+                <a href="#home">
+                    <img class="footer-signature-img" src="assets/images/signature.png" alt="Tawhid">
+                </a>
+            </div>
+            <div class="footer-menu">
+                <a href="#home" class="footer-link">HOME</a>
+                <a href="#aboutme" class="footer-link">ABOUT</a>
+                <a href="#skills" class="footer-link">SKILLS</a>
+                <a href="#projects" class="footer-link">PROJECTS</a>
+                <a href="#contact" class="footer-link">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tawhidul Hasan. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
