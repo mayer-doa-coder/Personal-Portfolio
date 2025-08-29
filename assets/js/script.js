@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     typeWriter();
     setupContactMeButton();
     initHamburgerMenu();
+    initScrollProgress();
+    initFadeInAnimations();
     
     // Delayed initialization to avoid conflicts
     setTimeout(() => {
@@ -45,6 +47,49 @@ document.addEventListener('DOMContentLoaded', function() {
         initElegantCardEffects();
     }, 500);
 });
+
+// Scroll Progress Indicator
+function initScrollProgress() {
+    const scrollProgress = document.getElementById('scrollProgress');
+    
+    function updateScrollProgress() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        
+        scrollProgress.style.width = progress + '%';
+    }
+    
+    window.addEventListener('scroll', updateScrollProgress);
+    updateScrollProgress(); // Initial call
+}
+
+// Fade in animations on scroll
+function initFadeInAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.skill, .project-item, .achievement-item, .timeline-content');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+    });
+}
 
 // Smooth transitions
 function initSmoothTransitions() {

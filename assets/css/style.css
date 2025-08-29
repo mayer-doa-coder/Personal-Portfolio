@@ -14,7 +14,37 @@ body {
     line-height: 1.6;
     color: #333;
     background: linear-gradient(135deg, rgb(10, 14, 39) 0%, rgb(20, 10, 40) 30%, rgb(25, 15, 45) 50%, rgb(20, 10, 40) 70%, rgb(10, 14, 39) 100%);
+    background-attachment: fixed;
     color:#fff;
+    position: relative;
+}
+
+/* ELEGANT BACKGROUND OVERLAY */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* SCROLL PROGRESS INDICATOR */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff, #87ceeb);
+    z-index: 10000;
+    transition: width 0.1s ease;
 }
 
 /* HEADER */
@@ -34,8 +64,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
-    max-width: 1200px;
+    padding: 10px 5%;
+    max-width: 1600px;
     margin: 0 auto;
     min-height: 80px;
 }
@@ -61,7 +91,7 @@ body {
 
 .navigation-menu {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
     margin-left: auto;
 }
@@ -69,12 +99,13 @@ body {
 .navigation-link {
     text-decoration: none;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 1px;
-    padding: 8px 12px;
-    border-radius: 4px;
+    padding: 10px 16px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     position: relative;
+    font-size: 1.05rem;
 }
 
 .navigation-link:hover {
@@ -162,10 +193,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 5%;
     position: relative;
     z-index: 1;
 }
@@ -179,13 +210,13 @@ body {
 
 .greeting {
     color: #00d4ff;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
     display: block;
 }
 
 .personal-name {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -241,8 +272,8 @@ body {
 
 .button-container {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
 .social-links {
@@ -256,21 +287,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: #87ceeb;
     text-decoration: none;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(135, 206, 235, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.social-icon:hover::before {
+    left: 100%;
 }
 
 .social-icon:hover {
     background: #87ceeb;
     color: #0a0e27;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(135, 206, 235, 0.3);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.4);
+    border-color: #87ceeb;
 }
 
 .social-icon svg {
@@ -287,31 +337,59 @@ body {
 }
 
 .personal-image img {
-    max-width: 400px;
-    height: 400px;
+    max-width: 450px;
+    height: 450px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid rgba(135, 206, 235, 0.3);
+    box-shadow: 0 0 30px rgba(135, 206, 235, 0.2);
+    transition: all 0.3s ease;
+}
+
+.personal-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(135, 206, 235, 0.4);
+    border-color: rgba(135, 206, 235, 0.6);
 }
 
 /* BUTTONS */
 .btn-download-cv, .btn-contact-info {
     background: transparent;
     color: #87ceeb;
-    padding: 15px 30px;
+    padding: 18px 35px;
     border: 2px solid #87ceeb;
     border-radius: 50px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    font-weight: 500;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+.btn-download-cv::before, .btn-contact-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(135, 206, 235, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.btn-download-cv:hover::before, .btn-contact-info:hover::before {
+    left: 100%;
 }
 
 .btn-download-cv:hover, .btn-contact-info:hover {
     background: #87ceeb;
     color: #0a0e27;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(135, 206, 235, 0.3);
 }
 
 /* ABOUT ME SECTION */
@@ -327,9 +405,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 5%;
 }
 
 .about-me-content {
@@ -338,8 +416,8 @@ body {
 }
 
 .about-me h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
     background: linear-gradient(45deg, #00d4ff, #87ceeb, #87ceeb, #6495ed, #87ceeb, #87ceeb, #00d4ff);
     background-size: 200% 200%;
     background-clip: text;
@@ -353,15 +431,15 @@ body {
 }
 
 .about-text {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     text-align: left;
 }
 
 .about-text p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     color: #e1e5f2;
 }
 
@@ -405,10 +483,10 @@ body {
 .achievement-item {
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(10, 14, 39, 0.3) 100%);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 2.5rem;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 212, 255, 0.2);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     will-change: transform;
@@ -431,9 +509,9 @@ body {
 }
 
 .achievement-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: rgba(0, 212, 255, 0.4);
-    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.15);
 }
 
 .achievement-item:hover::before {
@@ -600,15 +678,21 @@ body {
     min-height: 80vh;
     display: flex;
     align-items: center;
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        transparent 70%, 
+        rgba(45, 25, 85, 0.3) 85%, 
+        rgba(35, 35, 95, 0.4) 100%);
+    position: relative;
 }
 
 .about .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0 5%;
 }
 
 .about-content {
@@ -621,8 +705,8 @@ body {
 }
 
 .skills-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
     background: linear-gradient(45deg, #00d4ff, #87ceeb, #87ceeb, #6495ed, #87ceeb, #87ceeb, #00d4ff);
     background-size: 200% 200%;
     background-clip: text;
@@ -638,8 +722,8 @@ body {
 .skills-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 2rem;
+    margin-top: 2rem;
     align-items: start;
 }
 
@@ -649,26 +733,35 @@ body {
 }
 
 .skill {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
     text-align: left;
-    padding: 0.8rem;
+    padding: 1.2rem;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
+    border-radius: 8px;
     backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
 }
 
 .skill-name {
     display: inline-block;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .skill-percent {
     position: absolute;
-    right: 0.8rem;
-    top: 0.8rem;
+    right: 1.2rem;
+    top: 1.2rem;
     color: #00d4ff;
     font-weight: bold;
     font-size: 1rem;
@@ -710,15 +803,22 @@ body {
     min-height: 80vh;
     display: flex;
     align-items: center;
+    background: linear-gradient(150deg, 
+        rgba(50, 30, 90, 0.4) 0%, 
+        rgba(40, 45, 100, 0.45) 25%, 
+        rgba(22, 6, 41, 0.816) 50%, 
+        rgb(4, 12, 39) 75%, 
+        rgba(35, 12, 65, 0.5) 100%);
+    position: relative;
 }
 
 .project .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0 5%;
 }
 
 .project-content {
@@ -731,8 +831,8 @@ body {
 }
 
 .projects-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
     background: linear-gradient(45deg, #00d4ff, #87ceeb, #87ceeb, #6495ed, #87ceeb, #87ceeb, #00d4ff);
     background-size: 200% 200%;
     background-clip: text;
@@ -747,9 +847,9 @@ body {
 
 .projects-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
     align-items: start;
 }
 
@@ -759,21 +859,23 @@ body {
 }
 
 .project-item {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     position: relative;
     text-align: left;
     background: rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
+    border-radius: 12px;
     backdrop-filter: blur(10px);
     overflow: hidden;
-    height: 200px;
+    height: 250px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .project-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.15);
+    border-color: rgba(0, 212, 255, 0.3);
 }
 
 .project-item img {
@@ -833,12 +935,13 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    
 }
 
 .contact .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 5%;
 }
 
 .contact-content {
@@ -846,8 +949,8 @@ body {
 }
 
 .contact-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
     background: linear-gradient(45deg, #00d4ff, #87ceeb, #87ceeb, #6495ed, #87ceeb, #87ceeb, #00d4ff);
     background-size: 200% 200%;
     background-clip: text;
@@ -1056,8 +1159,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px;
-    max-width: 1200px;
+    padding: 0px 5%;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -1611,6 +1714,46 @@ body.page-loaded .navigation-bar {
     .achievements-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .container, .about-me .container, .about .container, .project .container, .contact .container {
+        max-width: 1200px;
+        padding: 0 4%;
+    }
+    
+    .personal-name {
+        font-size: 3.8rem;
+    }
+    
+    .greeting {
+        font-size: 2.2rem;
+    }
+    
+    .about-me h2, .skills-section h2, .projects-section h2, .contact-content h2 {
+        font-size: 2.8rem;
+    }
+    
+    .skills-section {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .projects-section {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .navigation-bar {
+        max-width: 1200px;
+        padding: 10px 4%;
+    }
+    
+    .footer-container {
+        max-width: 1200px;
+        padding: 0px 4%;
     }
 }
 
