@@ -499,3 +499,135 @@ function initHamburgerMenu() {
         }
     });
 }
+
+// Enhanced contact form handling
+function setupContactForm() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactFormSubmission);
+    }
+}
+
+// Handle contact form submission
+function handleContactFormSubmission(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('.btn-send');
+    const formStatus = document.getElementById('formStatus');
+    const originalText = submitButton.textContent;
+    
+    // Set the _replyto field to the sender's email
+    const senderEmail = formData.get('email');
+    form.querySelector('input[name="_replyto"]').value = senderEmail;
+    
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    submitButton.style.opacity = '0.7';
+    
+    // Hide any previous status messages
+    formStatus.style.display = 'none';
+    
+    // Submit to Formspree
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Network response was not ok');
+    })
+    .then(data => {
+        // Success
+        showNotification('Message sent successfully! Thank you for contacting me.', 'success');
+        form.reset(); // Clear form
+        
+        // Show success message in form area
+        formStatus.innerHTML = '<p style="color: #4CAF50; text-align: center; margin: 10px 0;">✓ Message sent successfully!</p>';
+        formStatus.style.display = 'block';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification('Failed to send message. Please try again.', 'error');
+        
+        // Show error message in form area
+        formStatus.innerHTML = '<p style="color: #f44336; text-align: center; margin: 10px 0;">✗ Failed to send message. Please try again.</p>';
+        formStatus.style.display = 'block';
+    })
+    .finally(() => {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+        submitButton.style.opacity = '1';
+        
+        // Hide status message after 5 seconds
+        setTimeout(() => {
+            if (formStatus.style.display === 'block') {
+                formStatus.style.display = 'none';
+            }
+        }, 5000);
+    });
+}
+
+// Show notification to user
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notification => notification.remove());
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-message">${message}</span>
+            <button class="notification-close" onclick="this.parentElement.parentElement.remove()">�</button>
+        </div>
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.remove();
+        }
+    }, 5000);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.classList.add('notification-show');
+    }, 100);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    typeWriter();
+    setupContactMeButton();
+    initHamburgerMenu();
+    initScrollProgress();
+    initFadeInAnimations();
+    setupContactForm(); // Add contact form setup
+    
+    // Delayed initialization to avoid conflicts
+    setTimeout(() => {
+        animateSkillBars();
+        initSmoothTransitions();
+    }, 100);
+
+    setTimeout(() => {
+        initParallaxEffect();
+        initTextRevealEffect();
+        initFloatingElements();
+        initElegantCardEffects();
+    }, 500);
+});
