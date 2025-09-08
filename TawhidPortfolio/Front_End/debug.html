@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Connection Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .info { 
+            background: #f0f8ff; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+            border-left: 4px solid #4CAF50;
+        }
+        .url { 
+            background: #e8f5e8; 
+            padding: 10px; 
+            font-family: monospace; 
+            margin: 5px 0;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .testing { background-color: #fff3cd; color: #856404; }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover { background-color: #45a049; }
+        .current-info {
+            background: #e1f5fe;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>?? Backend Connection Debugger</h1>
+        
+        <div class="current-info">
+            <h3>?? Current Page Info:</h3>
+            <div id="currentInfo"></div>
+        </div>
+        
+        <div class="info">
+            <h3>?? Quick Fix Instructions:</h3>
+            <ol>
+                <li><strong>Find your ASP.NET backend URL:</strong> Run your project in Visual Studio and note the URL</li>
+                <li><strong>Click "Test All Ports"</strong> below to find the working port</li>
+                <li><strong>If none work:</strong> Make sure your ASP.NET project is running</li>
+            </ol>
+        </div>
+        
+        <div class="info">
+            <h3>?? Backend Connection Test:</h3>
+            <button onclick="testAllPorts()">Test All Common Ports</button>
+            <button onclick="testSpecificPort()">Test Specific Port</button>
+            <input type="text" id="specificPort" placeholder="Enter port number" style="margin-left: 10px; padding: 8px;">
+        </div>
+        
+        <div id="testResults"></div>
+        
+        <div class="info">
+            <h3>?? Manual Check:</h3>
+            <p>Open these URLs in a new tab to see which one works:</p>
+            <div id="manualUrls"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Display current page info
+        document.getElementById('currentInfo').innerHTML = `
+            <strong>Protocol:</strong> ${window.location.protocol}<br>
+            <strong>Hostname:</strong> ${window.location.hostname}<br>
+            <strong>Current Port:</strong> ${window.location.port || 'default'}<br>
+            <strong>Full URL:</strong> ${window.location.href}
+        `;
+        
+        // Generate manual test URLs
+        const hostname = window.location.hostname;
+        const protocol = window.location.protocol;
+        const ports = ['44362', '44331', '5000', '5001', '44300', '44301', '44302'];
+        
+        let manualHtml = '';
+        ports.forEach(port => {
+            const url = `${protocol}//${hostname}:${port}/ContactAPI.aspx`;
+            manualHtml += `<div class="url"><a href="${url}" target="_blank">${url}</a></div>`;
+        });
+        document.getElementById('manualUrls').innerHTML = manualHtml;
+        
+        async function testPort(port) {
+            const url = `${protocol}//${hostname}:${port}/ContactAPI.aspx`;
+            const resultDiv = document.createElement('div');
+            resultDiv.className = 'test-result testing';
+            resultDiv.innerHTML = `?? Testing: ${url}...`;
+            document.getElementById('testResults').appendChild(resultDiv);
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    mode: 'cors'
+                });
+                
+                if (response.status === 405) {
+                    // Method not allowed is actually good - means the endpoint exists
+                    resultDiv.className = 'test-result success';
+                    resultDiv.innerHTML = `? <strong>FOUND!</strong> ${url} - Backend is running here!`;
+                    return true;
+                } else if (response.ok) {
+                    resultDiv.className = 'test-result success';
+                    resultDiv.innerHTML = `? <strong>FOUND!</strong> ${url} - Backend is running here!`;
+                    return true;
+                } else {
+                    resultDiv.className = 'test-result error';
+                    resultDiv.innerHTML = `? ${url} - HTTP ${response.status}`;
+                    return false;
+                }
+            } catch (error) {
+                resultDiv.className = 'test-result error';
+                resultDiv.innerHTML = `? ${url} - ${error.message}`;
+                return false;
+            }
+        }
+        
+        async function testAllPorts() {
+            document.getElementById('testResults').innerHTML = '<h4>?? Testing Common Ports...</h4>';
+            
+            const ports = ['44362', '44331', '5000', '5001', '44300', '44301', '44302'];
+            
+            for (const port of ports) {
+                const success = await testPort(port);
+                if (success) {
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'test-result success';
+                    successDiv.innerHTML = `<h4>?? Backend Found! Update your JavaScript:</h4>
+                        <div class="url">const backendUrl = '${protocol}//${hostname}:${port}';</div>`;
+                    document.getElementById('testResults').appendChild(successDiv);
+                    return;
+                }
+                // Small delay to avoid overwhelming the server
+                await new Promise(resolve => setTimeout(resolve, 200));
+            }
+            
+            const notFoundDiv = document.createElement('div');
+            notFoundDiv.className = 'test-result error';
+            notFoundDiv.innerHTML = `<h4>? No backend found on common ports</h4>
+                <p>Make sure your ASP.NET project is running in Visual Studio!</p>`;
+            document.getElementById('testResults').appendChild(notFoundDiv);
+        }
+        
+        async function testSpecificPort() {
+            const port = document.getElementById('specificPort').value;
+            if (!port) {
+                alert('Please enter a port number');
+                return;
+            }
+            
+            document.getElementById('testResults').innerHTML = `<h4>?? Testing Port ${port}...</h4>`;
+            await testPort(port);
+        }
+    </script>
+</body>
+</html>

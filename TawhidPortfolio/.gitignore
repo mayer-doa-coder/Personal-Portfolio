@@ -1,0 +1,65 @@
+# Visual Studio generated files
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.suo
+*.cache
+*.log
+
+# ASP.NET specific
+Temporary ASP.NET Files/
+App_Data/
+
+# NuGet packages (if not using package restore)
+packages/
+!packages/repositories.config
+
+# Visual Studio cache files
+*.vspscc
+*.vssscc
+.vs/
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Web publish profiles
+*.Publish.xml
+*.pubxml
+*.publishproj
+
+# Sensitive data
+Web.config.secret
+appsettings.secret.json
+connection-strings.config
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

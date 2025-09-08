@@ -1,0 +1,258 @@
+using System;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Text;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace TawhidPortfolio
+{
+    public partial class QuickDbTest : Page
+    {
+        // Control declarations
+        protected Button btnTestConnection;
+        protected Button btnTestTables;
+        protected Button btnTestData;
+        protected Panel pnlResults;
+        protected Literal litResults;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                litResults.Text = "<div class='info'>Click the buttons above to test your database setup according to your actual schema.</div>";
+            }
+        }
+
+        protected void btnTestConnection_Click(object sender, EventArgs e)
+        {
+            StringBuilder result = new StringBuilder();
+            
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                result.Append("<h3>?? Database Connection Test</h3>");
+                result.Append($"<p><strong>Connection String:</strong> {MaskConnectionString(connectionString)}</p>");
+                
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string version = connection.ServerVersion;
+                    string database = connection.Database;
+                    
+                    result.Append("<div class='test-result success'>");
+                    result.Append("? <strong>Connection Successful!</strong><br>");
+                    result.Append($"?? <strong>Database:</strong> {database}<br>");
+                    result.Append($"??? <strong>Server Version:</strong> {version}<br>");
+                    result.Append($"? <strong>Test Time:</strong> {DateTime.Now:yyyy-MM-dd HH:mm:ss}");
+                    result.Append("</div>");
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Append("<div class='test-result error'>");
+                result.Append("? <strong>Connection Failed!</strong><br>");
+                result.Append($"?? <strong>Error:</strong> {ex.Message}<br>");
+                result.Append("<strong>?? Suggestions:</strong><br>");
+                result.Append("1. Make sure SQL Server LocalDB is running<br>");
+                result.Append("2. Check if the database 'TawhidPortfolioDB' exists<br>");
+                result.Append("3. Run your CreateDatabase.sql script first");
+                result.Append("</div>");
+            }
+            
+            litResults.Text = result.ToString();
+        }
+
+        protected void btnTestTables_Click(object sender, EventArgs e)
+        {
+            StringBuilder result = new StringBuilder();
+            
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                result.Append("<h3>?? Table Structure Test</h3>");
+                
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    
+                    // Test each table according to your actual schema
+                    string[] tables = { "ContactMessages", "Projects", "Blogs" };
+                    
+                    result.Append("<table>");
+                    result.Append("<tr><th>Table Name</th><th>Status</th><th>Columns</th></tr>");
+                    
+                    foreach (string tableName in tables)
+                    {
+                        try
+                        {
+                            string query = $@"
+                                SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT
+                                FROM INFORMATION_SCHEMA.COLUMNS 
+                                WHERE TABLE_NAME = '{tableName}'
+                                ORDER BY ORDINAL_POSITION";
+                            
+                            using (SqlCommand cmd = new SqlCommand(query, connection))
+                            {
+                                using (SqlDataReader reader = cmd.ExecuteReader())
+                                {
+                                    StringBuilder columns = new StringBuilder();
+                                    int columnCount = 0;
+                                    
+                                    while (reader.Read())
+                                    {
+                                        if (columnCount > 0) columns.Append(", ");
+                                        columns.Append($"{reader["COLUMN_NAME"]} ({reader["DATA_TYPE"]})");
+                                        columnCount++;
+                                    }
+                                    
+                                    if (columnCount > 0)
+                                    {
+                                        result.Append($"<tr><td>{tableName}</td><td><span style='color:green'>? EXISTS</span></td><td>{columns}</td></tr>");
+                                    }
+                                    else
+                                    {
+                                        result.Append($"<tr><td>{tableName}</td><td><span style='color:red'>? MISSING</span></td><td>-</td></tr>");
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            result.Append($"<tr><td>{tableName}</td><td><span style='color:red'>? ERROR</span></td><td>{ex.Message}</td></tr>");
+                        }
+                    }
+                    
+                    result.Append("</table>");
+                    
+                    result.Append("<div class='test-result info'>");
+                    result.Append("?? <strong>Expected Schema:</strong><br>");
+                    result.Append("• <strong>Projects:</strong> Id, Title, Description, TechStack, ProjectLink, ImageUrl, CreatedAt<br>");
+                    result.Append("• <strong>Blogs:</strong> Id, Title, Content, ImageUrl, CreatedAt<br>");
+                    result.Append("• <strong>ContactMessages:</strong> Id, Name, Email, Subject, Message, CreatedAt");
+                    result.Append("</div>");
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Append("<div class='test-result error'>");
+                result.Append($"? <strong>Table Test Failed:</strong> {ex.Message}");
+                result.Append("</div>");
+            }
+            
+            litResults.Text = result.ToString();
+        }
+
+        protected void btnTestData_Click(object sender, EventArgs e)
+        {
+            StringBuilder result = new StringBuilder();
+            
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                result.Append("<h3>?? Data Count Test</h3>");
+                
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    
+                    // Test data counts according to your actual schema
+                    string[] tables = { "ContactMessages", "Projects", "Blogs" };
+                    
+                    result.Append("<table>");
+                    result.Append("<tr><th>Table Name</th><th>Record Count</th><th>Status</th></tr>");
+                    
+                    foreach (string tableName in tables)
+                    {
+                        try
+                        {
+                            string query = $"SELECT COUNT(*) FROM [{tableName}]";
+                            using (SqlCommand cmd = new SqlCommand(query, connection))
+                            {
+                                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                                string status = count > 0 ? "? HAS DATA" : "?? EMPTY";
+                                string countClass = count > 0 ? "count" : "";
+                                
+                                result.Append($"<tr><td>{tableName}</td><td class='{countClass}'>{count}</td><td>{status}</td></tr>");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            result.Append($"<tr><td>{tableName}</td><td>-</td><td>? ERROR: {ex.Message}</td></tr>");
+                        }
+                    }
+                    
+                    result.Append("</table>");
+                    
+                    // Test specific queries for your actual schema
+                    result.Append("<h4>?? Specific Query Tests</h4>");
+                    result.Append("<table>");
+                    result.Append("<tr><th>Test Query</th><th>Result</th></tr>");
+                    
+                    // Test Projects query
+                    try
+                    {
+                        string projectQuery = "SELECT Id, Title, Description, TechStack, ProjectLink, ImageUrl, CreatedAt FROM Projects";
+                        using (SqlCommand cmd = new SqlCommand(projectQuery, connection))
+                        {
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                int count = 0;
+                                while (reader.Read()) count++;
+                                result.Append($"<tr><td>Projects Query</td><td>? SUCCESS ({count} records)</td></tr>");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        result.Append($"<tr><td>Projects Query</td><td>? FAILED: {ex.Message}</td></tr>");
+                    }
+                    
+                    // Test Blogs query
+                    try
+                    {
+                        string blogQuery = "SELECT Id, Title, Content, ImageUrl, CreatedAt FROM Blogs";
+                        using (SqlCommand cmd = new SqlCommand(blogQuery, connection))
+                        {
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                int count = 0;
+                                while (reader.Read()) count++;
+                                result.Append($"<tr><td>Blogs Query</td><td>? SUCCESS ({count} records)</td></tr>");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        result.Append($"<tr><td>Blogs Query</td><td>? FAILED: {ex.Message}</td></tr>");
+                    }
+                    
+                    result.Append("</table>");
+                }
+            }
+            catch (Exception ex)
+            {
+                result.Append("<div class='test-result error'>");
+                result.Append($"? <strong>Data Test Failed:</strong> {ex.Message}");
+                result.Append("</div>");
+            }
+            
+            litResults.Text = result.ToString();
+        }
+
+        private string MaskConnectionString(string connectionString)
+        {
+            if (string.IsNullOrEmpty(connectionString))
+                return "Not configured";
+            
+            // Mask sensitive information
+            if (connectionString.Contains("Password="))
+            {
+                connectionString = System.Text.RegularExpressions.Regex.Replace(
+                    connectionString, @"Password=[^;]*", "Password=***");
+            }
+            
+            return connectionString;
+        }
+    }
+}

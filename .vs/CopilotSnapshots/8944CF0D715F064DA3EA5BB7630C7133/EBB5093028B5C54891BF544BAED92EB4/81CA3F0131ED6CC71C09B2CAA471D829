@@ -1,0 +1,121 @@
+﻿-- SQL Script to create the TawhidPortfolioDB database and all tables
+-- Run this script in SQL Server Management Studio (SSMS)
+
+-- Create Database (run this first if database doesn't exist)
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'TawhidPortfolioDB')
+BEGIN
+    CREATE DATABASE TawhidPortfolioDB;
+END
+GO
+
+-- Use the database
+USE TawhidPortfolioDB;
+GO
+
+-- Create ContactMessages table
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='ContactMessages' AND xtype='U')
+BEGIN
+    CREATE TABLE ContactMessages (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        Name NVARCHAR(100) NOT NULL,
+        Email NVARCHAR(255) NOT NULL,
+        Subject NVARCHAR(255) NOT NULL,
+        Message NVARCHAR(MAX) NOT NULL,
+        CreatedAt DATETIME NOT NULL DEFAULT GETDATE()
+    );
+END
+GO
+
+-- Create Projects table
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Projects' AND xtype='U')
+BEGIN
+    CREATE TABLE Projects (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        Title NVARCHAR(255) NOT NULL,
+        Description NVARCHAR(MAX) NOT NULL,
+        ImageUrl NVARCHAR(500),
+        ProjectUrl NVARCHAR(500),
+        CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+        UpdatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+        IsActive BIT NOT NULL DEFAULT 1
+    );
+END
+GO
+
+-- Create BlogPosts table
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='BlogPosts' AND xtype='U')
+BEGIN
+    CREATE TABLE BlogPosts (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        Title NVARCHAR(255) NOT NULL,
+        Description NVARCHAR(MAX) NOT NULL,
+        Content NVARCHAR(MAX),
+        ImageUrl NVARCHAR(500),
+        Slug NVARCHAR(255),
+        CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+        UpdatedAt DATETIME NOT NULL DEFAULT GETDATE(),
+        IsActive BIT NOT NULL DEFAULT 1
+    );
+END
+GO
+
+-- Create indexes for better performance
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_ContactMessages_CreatedAt')
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_ContactMessages_CreatedAt 
+    ON ContactMessages (CreatedAt DESC);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_Projects_CreatedAt')
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_Projects_CreatedAt 
+    ON Projects (CreatedAt DESC);
+END
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.indexes WHERE name = 'IX_BlogPosts_CreatedAt')
+BEGIN
+    CREATE NONCLUSTERED INDEX IX_BlogPosts_CreatedAt 
+    ON BlogPosts (CreatedAt DESC);
+END
+GO
+
+-- Optional: Insert sample data for testing
+-- Contact Messages
+IF NOT EXISTS (SELECT * FROM ContactMessages)
+BEGIN
+    INSERT INTO ContactMessages (Name, Email, Subject, Message)
+    VALUES 
+        ('John Doe', 'john.doe@example.com', 'Test Subject', 'This is a test message.'),
+        ('Jane Smith', 'jane.smith@example.com', 'Portfolio Inquiry', 'I love your portfolio! Can we discuss a project?');
+END
+GO
+
+-- Sample Projects
+IF NOT EXISTS (SELECT * FROM Projects)
+BEGIN
+    INSERT INTO Projects (Title, Description, ImageUrl, ProjectUrl, IsActive)
+    VALUES 
+        ('Numerical Method Project', 'A Numerical Method Project that focuses on applying computational techniques to solve mathematical problems that are difficult to solve analytically', 'assets/images/numerical.png', 'https://github.com/mayer-doa-coder/Numerical-Method-Project', 1),
+        ('Readify - Book Reading App', 'A Book Reading App that allows users to read, organize, and manage books conveniently on their devices', 'assets/images/readifylogo.png', 'https://github.com/mayer-doa-coder/Readify-Android-App', 1),
+        ('Police Department System', 'A Console-based Project designed to manage and organize police records efficiently', 'assets/images/oop project.png', 'https://github.com/mayer-doa-coder/OOP-Project', 1),
+        ('Parabounce - Projectile Simulator', 'A Physics Projectile Simulator that allows users to simulate and visualize projectile motion in a 2D environment', 'assets/images/parabounce.png', 'https://github.com/mayer-doa-coder/ParaBounce-Projectile-Motion-Simulator', 1);
+END
+GO
+
+-- Sample Blog Posts
+IF NOT EXISTS (SELECT * FROM BlogPosts)
+BEGIN
+    INSERT INTO BlogPosts (Title, Description, Content, Slug, IsActive)
+    VALUES 
+        ('Getting Started with Competitive Programming', 'A comprehensive guide for beginners who want to dive into the world of competitive programming. Learn about essential algorithms, data structures, and problem-solving strategies.', 'Competitive programming is an excellent way to improve your problem-solving skills and algorithmic thinking...', 'getting-started-competitive-programming', 1),
+        ('Modern Web Development Trends', 'Exploring the latest trends in web development including React, TypeScript, and modern frameworks. Discover how these technologies are shaping the future of web applications.', 'The web development landscape is constantly evolving with new technologies and frameworks...', 'modern-web-development-trends', 1),
+        ('Building Scalable Systems', 'Learn the principles and best practices for designing and building scalable software systems. From architecture patterns to performance optimization techniques.', 'Building scalable systems requires careful planning and understanding of various architectural patterns...', 'building-scalable-systems', 1),
+        ('Machine Learning for Beginners', 'An introduction to machine learning concepts and practical applications. Discover how to get started with Python libraries and build your first ML models.', 'Machine learning has become one of the most important technologies in the modern world...', 'machine-learning-beginners', 1),
+        ('Software Engineering Best Practices', 'Essential practices every software engineer should know. From code quality and testing to version control and team collaboration strategies.', 'Following best practices in software engineering is crucial for building maintainable and reliable software...', 'software-engineering-best-practices', 1),
+        ('The Future of Technology', 'Exploring emerging technologies and their potential impact on society. From AI and blockchain to quantum computing and IoT innovations.', 'Technology continues to advance at an unprecedented pace, bringing new opportunities and challenges...', 'future-of-technology', 1);
+END
+GO
+
+SELECT 'Database and all tables created successfully!' AS Status;

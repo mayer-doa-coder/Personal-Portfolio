@@ -1,0 +1,483 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tawhidul Hasan - Computer Science & Engineering Student at KUET. Competitive programmer, software developer, and tech enthusiast showcasing projects and achievements.">
+    <meta name="keywords" content="Tawhidul Hasan, KUET, Computer Science, Software Developer, Competitive Programming, Portfolio">
+    <title>Tawhidul Hasan - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/notifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SCROLL PROGRESS INDICATOR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <nav class="navigation-bar">
+            <div class="navigation-container">
+                <div class="signature">
+                    <a href="#home">
+                        <img class="signature-img" src="assets/images/signature.png" alt="Tawhid">
+                    </a>
+                </div>
+                <div class="navigation-menu">
+                    <a href="#home" class="navigation-link">HOME</a>
+                    <a href="#aboutme" class="navigation-link">ABOUT</a>
+                    <a href="#blog" class="navigation-link">BLOG</a>
+                    <a href="#skills" class="navigation-link">SKILLS</a>
+                    <a href="#projects" class="navigation-link">PROJECTS</a>
+                    <a href="#contact" class="navigation-link">CONTACT</a>
+                </div>
+                <!-- Hamburger Menu for Mobile -->
+                <div class="hamburger" id="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--PERSONAL INFO SECTION-->
+    <main id="main-content">
+        <section id="home" class="personal-info">
+            <div class="container">
+                <div class="personal-details">
+                    <span class="greeting">Hello, I'm</span>
+                    <h1 class="personal-name">Tawhidul Hasan<br><span class="typewriter-prefix">A&nbsp;</span><span class="personal-info-typewriter"></span></h1>
+                    <div class="button-container">
+                        <button type="button" class="btn-download-cv">Download CV</button>
+                        <button type="button" class="btn-contact-info">Contact Me</button>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tawhidul.hasan.792/" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://github.com/mayer-doa-coder" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tawhidul-hasan401/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/the_f.e.r.o.c.i.o.u.s?igsh=MW0yZWd2ZmExeDg2dg==" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="personal-image">
+                    <img src="assets/images/2107004.jpg" alt="Tawhidul Hasan">
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="aboutme" class="about-me">
+            <div class="container">
+                <div class="about-me-content">
+                    <h2>About Me</h2>
+                    <div class="about-text">
+                        <p>I am currently pursuing a degree in <span class="highlight">Computer Science and Engineering</span> at <span class="highlight">Khulna University of Engineering and Technology (KUET)</span>, where I am developing a strong foundation in programming and software development.</p>
+
+                        <p>My areas of expertise include systems programming with <span class="highlight">C/C++</span>, web development with <span class="highlight">JavaScript</span>, <span class="highlight">TypeScript</span>, <span class="highlight">React.js</span>, <span class="highlight">Node.js</span>, and <span class="highlight">PHP (Laravel)</span>, as well as data science and machine learning with <span class="highlight">Python</span>. I have a particular interest in designing <span class="highlight">user-friendly interfaces</span> and building <span class="highlight">scalable, efficient systems</span>.</p>
+
+                        <p>Alongside my academic studies, I engage in <span class="highlight">personal projects</span> to broaden my skills and explore emerging technologies. I am motivated by the vision of leveraging <span class="highlight">technology as a catalyst</span> for innovation and positive impact.</p>
+
+                        <div class="education-section">
+                            <h3>Educational Journey</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2023 - Present</div>
+                                        <h4>Bachelor of Science in Computer Science and Engineering</h4>
+                                        <p class="institution">Khulna University of Engineering & Technology (KUET)</p>
+                                        <p class="description">Currently pursuing advanced studies in computer science with focus on software engineering, algorithms, and emerging technologies.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2022</div>
+                                        <h4>Higher Secondary Certificate (HSC)</h4>
+                                        <p class="institution">St. Joseph Higher Secondary School</p>
+                                        <p class="description">Completed higher secondary education with strong foundation in science and mathematics.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <div class="timeline-year">2019</div>
+                                        <h4>Secondary School Certificate (SSC)</h4>
+                                        <p class="institution">Mirpur Cantonment Public School & College</p>
+                                        <p class="description">Built fundamental academic excellence with comprehensive secondary education.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="achievements-section">
+                            <h3>Notable Achievements</h3>
+                            <div class="achievements-grid">
+                                <div class="achievement-item">
+                                    <div class="achievement-content">
+                                        <h4>Competitive Programming Excellence</h4>
+                                        <p>My <span class="highlight">competitive programming journey</span> has been marked by consistent excellence, earning <span class="highlight">finalist positions</span> across multiple prestigious university-level programming contests:</p>
+                                        <ul class="achievement-list">
+                                            <li><span class="highlight">AUST IUPC 2025</span> - Finalist</li>
+                                            <li><span class="highlight">KUET IUPC 2025</span> - Finalist</li>
+                                            <li><span class="highlight">DUET IUPC 2025</span> - Finalist</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-item">
+                                    <div class="achievement-content">
+                                        <h4>Platform Recognition</h4>
+                                        <p>Achieved a peak rating of <span class="highlight rating-badge">1429</span> on <span class="highlight">Codeforces</span>, demonstrating consistent problem-solving prowess and advanced algorithmic expertise in competitive programming.</p>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-item">
+                                    <div class="achievement-content">
+                                        <h4>Innovation Excellence</h4>
+                                        <p>Secured <span class="highlight">1st position</span> in the <span class="highlight">HACK project showcasing</span>, highlighting my ability to conceptualize, develop, and present innovative technological solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="blog-content">
+                    <h2>BLOG</h2>
+                    <div class="blog-grid">
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog-placeholder-1.jpg" alt="Getting Started with Competitive Programming" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-content-text">
+                                    <h3>Getting Started with Competitive Programming</h3>
+                                    <p>A comprehensive guide for beginners who want to dive into the world of competitive programming. Learn about essential algorithms, data structures, and problem-solving strategies.</p>
+                                </div>
+                                <a href="#" class="blog-read-more">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog-placeholder-2.jpg" alt="Modern Web Development Trends" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-content-text">
+                                    <h3>Modern Web Development Trends</h3>
+                                    <p>Exploring the latest trends in web development including React, TypeScript, and modern frameworks. Discover how these technologies are shaping the future of web applications.</p>
+                                </div>
+                                <a href="#" class="blog-read-more">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog-placeholder-3.jpg" alt="Building Scalable Systems" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-content-text">
+                                    <h3>Building Scalable Systems</h3>
+                                    <p>Learn the principles and best practices for designing and building scalable software systems. From architecture patterns to performance optimization techniques.</p>
+                                </div>
+                                <a href="#" class="blog-read-more">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog-placeholder-4.jpg" alt="Machine Learning for Beginners" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-content-text">
+                                    <h3>Machine Learning for Beginners</h3>
+                                    <p>An introduction to machine learning concepts and practical applications. Discover how to get started with Python libraries and build your first ML models.</p>
+                                </div>
+                                <a href="#" class="blog-read-more">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog-placeholder-5.jpg" alt="Software Engineering Best Practices" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-content-text">
+                                    <h3>Software Engineering Best Practices</h3>
+                                    <p>Essential practices every software engineer should know. From code quality and testing to version control and team collaboration strategies.</p>
+                                </div>
+                                <a href="#" class="blog-read-more">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="assets/images/blog-placeholder-6.jpg" alt="The Future of Technology" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
+                            </div>
+                            <div class="blog-content-area">
+                                <div class="blog-content-text">
+                                    <h3>The Future of Technology</h3>
+                                    <p>Exploring emerging technologies and their potential impact on society. From AI and blockchain to quantum computing and IoT innovations.</p>
+                                </div>
+                                <a href="#" class="blog-read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="skills-section">
+                        <h2>Skills</h2>
+                        <div class="skill">
+                            <span class="skill-name">Adobe Photoshop</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="100%"></div>
+                            </div>
+                            <span class="skill-percent">100%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Adobe Illustrator</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Canva</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">React js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40%"></div>
+                            </div>
+                            <span class="skill-percent">40%</span>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">PHP/Laravel</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECT SECTION -->
+        <section id="projects" class="project">
+            <div class="container">
+                <div class="project-content">
+                    <div class="projects-section">
+                        <h2>PROJECTS</h2>
+                        <div class="projects-grid">
+                            <!-- Projects will be loaded dynamically from database -->
+                            <!-- Fallback content in case JavaScript fails -->
+                            <noscript>
+                                <a href="https://github.com/mayer-doa-coder/Numerical-Method-Project" target="_blank" class="project-link">
+                                    <div class="project-item">
+                                        <img src="assets/images/numerical.png" alt="Numerical">
+                                        <div class="project-overlay">
+                                            <h3>Numerical</h3>
+                                            <p>A Numerical Method Project that focuses on applying computational techniques to solve mathematical problems that are difficult to solve analytically</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/mayer-doa-coder/Readify-Android-App" target="_blank" class="project-link">
+                                    <div class="project-item">
+                                        <img src="assets/images/readifylogo.png" alt="Readify">
+                                        <div class="project-overlay">
+                                            <h3>Readify</h3>
+                                            <p>A Book Reading App that allows users to read, organize, and manage books conveniently on their devices</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/mayer-doa-coder/OOP-Project" target="_blank" class="project-link">
+                                    <div class="project-item">
+                                        <img src="assets/images/oop project.png" alt="OOP">
+                                        <div class="project-overlay">
+                                            <h3>Police Department System</h3>
+                                            <p>A Console-based Project designed to manage and organize police records efficiently</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/mayer-doa-coder/ParaBounce-Projectile-Motion-Simulator" target="_blank" class="project-link">
+                                    <div class="project-item">
+                                        <img src="assets/images/parabounce.png" alt="Parabounce">
+                                        <div class="project-overlay">
+                                            <h3>Parabounce</h3>
+                                            <p>A Physics Projectile Simulator that allows users to simulate and visualize projectile motion in a 2D environment</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </noscript>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Contact</h2>
+
+                    <div class="contact-main">
+                        <div class="contact-left">
+                            <h3>For any information,<br><span class="highlight">contact me</span></h3>
+
+                            <div class="contact-info-list">
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Name</h4>
+                                        <p>Tawhidul Hasan</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Address</h4>
+                                        <p>Dept. of CSE, KUET, Khulna, Bangladesh</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Permanent Address</h4>
+                                        <p>8/4 Block-E, Mirpur-12, Dhaka</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <h4>Email</h4>
+                                        <p>ttawhid401@email.com<br>hasan2107004@stud.kuet.ac.bd</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-right">
+                            <h3>Message me</h3>
+                            <form class="contact-form" method="POST" id="contactForm">
+                                <div class="form-row">
+                                    <input type="text" placeholder="Name" class="form-input" name="name" required>
+                                    <input type="email" placeholder="Email" class="form-input" name="email" required>
+                                </div>
+                                <input type="text" placeholder="Subject" class="form-input full-width" name="subject" required>
+                                <textarea placeholder="Message.." class="form-textarea" name="message" required></textarea>
+                                <button type="submit" class="btn-send" id="submitBtn">Send message</button>
+                            </form>
+                            <div class="form-status" id="formStatus" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-signature">
+                <a href="#home">
+                    <img class="footer-signature-img" src="assets/images/signature.png" alt="Tawhid">
+                </a>
+            </div>
+            <div class="footer-menu">
+                <a href="#home" class="footer-link">HOME</a>
+                <a href="#aboutme" class="footer-link">ABOUT</a>
+                <a href="#blog" class="footer-link">BLOG</a>
+                <a href="#skills" class="footer-link">SKILLS</a>
+                <a href="#projects" class="footer-link">PROJECTS</a>
+                <a href="#contact" class="footer-link">CONTACT</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tawhidul Hasan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTop" aria-label="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Info</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .info { background: #f0f8ff; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .url { background: #e8f5e8; padding: 10px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Debug Information</h1>
+    
+    <div class="info">
+        <h3>Current Page Info:</h3>
+        <div class="url" id="currentInfo"></div>
+    </div>
+    
+    <div class="info">
+        <h3>Suggested Backend URLs to Try:</h3>
+        <div id="suggestions"></div>
+    </div>
+    
+    <script>
+        // Display current page info
+        document.getElementById('currentInfo').innerHTML = `
+            Protocol: ${window.location.protocol}<br>
+            Hostname: ${window.location.hostname}<br>
+            Port: ${window.location.port || 'default'}<br>
+            Full URL: ${window.location.href}
+        `;
+        
+        // Generate suggestions
+        const hostname = window.location.hostname;
+        const suggestions = [
+            `http://${hostname}:44362/ContactAPI.aspx`,
+            `https://${hostname}:44362/ContactAPI.aspx`,
+            `http://${hostname}:5000/ContactAPI.aspx`,
+            `http://${hostname}/ContactAPI.aspx`,
+            `/ContactAPI.aspx`
+        ];
+        
+        let suggestionsHtml = '';
+        suggestions.forEach(url => {
+            suggestionsHtml += `<div class="url">${url}</div>`;
+        });
+        
+        document.getElementById('suggestions').innerHTML = suggestionsHtml;
+    </script>
+</body>
+</html>

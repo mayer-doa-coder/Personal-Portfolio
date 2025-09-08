@@ -1,0 +1,248 @@
+﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class AdminPanel : Page
+    {
+        // Control declarations
+        protected Label lblProjectCount;
+        protected Label lblBlogCount;
+        protected Label lblMessageCount;
+        protected Label lblActiveProjectCount;
+        protected GridView gvProjects;
+        protected GridView gvBlogs;
+        protected GridView gvMessages;
+        protected Button btnRefreshMessages;
+        protected Button btnRefreshDashboard;
+        protected Panel pnlDashboardError;
+        protected Label lblDashboardError;
+        protected Panel pnlProjectError;
+        protected Label lblProjectError;
+        protected Panel pnlBlogError;
+        protected Label lblBlogError;
+        protected Panel pnlMessageError;
+        protected Label lblMessageError;
+
+        private ProjectDAL projectDAL = new ProjectDAL();
+        private BlogDAL blogDAL = new BlogDAL();  // Changed from BlogPostDAL
+        private ContactMessageDAL contactMessageDAL = new ContactMessageDAL();
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!IsPostBack)
+                {
+                    LoadDashboardData();
+                    LoadProjectsData();
+                    LoadBlogsData();
+                    LoadMessagesData();
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Page Load Error: " + ex.Message);
+            }
+        }
+
+        private void LoadDashboardData()
+        {
+            try
+            {
+                pnlDashboardError.Visible = false;
+                
+                var projects = projectDAL.GetAllProjects();
+                var activeProjects = projectDAL.GetActiveProjects();
+                var blogs = blogDAL.GetAllBlogs();  // Changed from blogPostDAL
+                var messages = contactMessageDAL.GetAllMessages();
+
+                lblProjectCount.Text = projects.Count.ToString();
+                lblActiveProjectCount.Text = activeProjects.Count.ToString();
+                lblBlogCount.Text = blogs.Count.ToString();
+                lblMessageCount.Text = messages.Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                ShowDashboardError("Error loading dashboard: " + ex.Message);
+            }
+        }
+
+        private void LoadProjectsData()
+        {
+            try
+            {
+                pnlProjectError.Visible = false;
+                var projects = projectDAL.GetAllProjects();
+                gvProjects.DataSource = projects;
+                gvProjects.DataBind();
+            }
+            catch (Exception ex)
+            {
+                ShowProjectError("Error loading projects: " + ex.Message);
+            }
+        }
+
+        private void LoadBlogsData()
+        {
+            try
+            {
+                pnlBlogError.Visible = false;
+                var blogs = blogDAL.GetAllBlogs();  // Changed from blogPostDAL
+                gvBlogs.DataSource = blogs;
+                gvBlogs.DataBind();
+            }
+            catch (Exception ex)
+            {
+                ShowBlogError("Error loading blogs: " + ex.Message);
+            }
+        }
+
+        private void LoadMessagesData()
+        {
+            try
+            {
+                pnlMessageError.Visible = false;
+                var messages = contactMessageDAL.GetAllMessages();
+                gvMessages.DataSource = messages;
+                gvMessages.DataBind();
+            }
+            catch (Exception ex)
+            {
+                ShowMessageError("Error loading messages: " + ex.Message);
+            }
+        }
+
+        protected void gvProjects_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteProject")
+            {
+                try
+                {
+                    int projectId = Convert.ToInt32(e.CommandArgument);
+                    bool success = projectDAL.DeleteProject(projectId);
+                    
+                    if (success)
+                    {
+                        LoadProjectsData();
+                        LoadDashboardData();
+                        ShowSuccess("Project deleted successfully!");
+                    }
+                    else
+                    {
+                        ShowProjectError("Failed to delete project.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ShowProjectError("Error deleting project: " + ex.Message);
+                }
+            }
+        }
+
+        protected void gvBlogs_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteBlog")
+            {
+                try
+                {
+                    int blogId = Convert.ToInt32(e.CommandArgument);
+                    bool success = blogDAL.DeleteBlog(blogId);  // Changed from blogPostDAL
+                    
+                    if (success)
+                    {
+                        LoadBlogsData();
+                        LoadDashboardData();
+                        ShowSuccess("Blog post deleted successfully!");
+                    }
+                    else
+                    {
+                        ShowBlogError("Failed to delete blog post.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ShowBlogError("Error deleting blog post: " + ex.Message);
+                }
+            }
+        }
+
+        protected void gvMessages_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteMessage")
+            {
+                try
+                {
+                    int messageId = Convert.ToInt32(e.CommandArgument);
+                    bool success = contactMessageDAL.DeleteMessage(messageId);
+                    
+                    if (success)
+                    {
+                        LoadMessagesData();
+                        LoadDashboardData();
+                        ShowSuccess("Message deleted successfully!");
+                    }
+                    else
+                    {
+                        ShowMessageError("Failed to delete message.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ShowMessageError("Error deleting message: " + ex.Message);
+                }
+            }
+        }
+
+        protected void btnRefreshMessages_Click(object sender, EventArgs e)
+        {
+            LoadMessagesData();
+            LoadDashboardData();
+        }
+
+        protected void btnRefreshDashboard_Click(object sender, EventArgs e)
+        {
+            LoadDashboardData();
+            LoadProjectsData();
+            LoadBlogsData();
+            LoadMessagesData();
+        }
+
+        private void ShowSuccess(string message)
+        {
+            Response.Write($"<script>alert('{message}');</script>");
+        }
+
+        private void ShowError(string message)
+        {
+            Response.Write($"<script>alert('Error: {message}');</script>");
+        }
+
+        private void ShowDashboardError(string message)
+        {
+            pnlDashboardError.Visible = true;
+            lblDashboardError.Text = message;
+        }
+
+        private void ShowProjectError(string message)
+        {
+            pnlProjectError.Visible = true;
+            lblProjectError.Text = message;
+        }
+
+        private void ShowBlogError(string message)
+        {
+            pnlBlogError.Visible = true;
+            lblBlogError.Text = message;
+        }
+
+        private void ShowMessageError(string message)
+        {
+            pnlMessageError.Visible = true;
+            lblMessageError.Text = message;
+        }
+    }
+}

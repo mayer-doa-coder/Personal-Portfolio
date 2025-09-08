@@ -1,0 +1,186 @@
+﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class AdminPanel : Page
+    {
+        // Control declarations
+        protected Label lblProjectCount;
+        protected Label lblBlogCount;
+        protected Label lblMessageCount;
+        protected Label lblActiveProjectCount;
+        protected GridView gvProjects;
+        protected GridView gvBlogs;
+        protected GridView gvMessages;
+        protected Button btnRefreshMessages;
+
+        private ProjectDAL projectDAL = new ProjectDAL();
+        private BlogPostDAL blogPostDAL = new BlogPostDAL();
+        private ContactMessageDAL contactMessageDAL = new ContactMessageDAL();
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                LoadDashboardData();
+                LoadProjectsData();
+                LoadBlogsData();
+                LoadMessagesData();
+            }
+        }
+
+        private void LoadDashboardData()
+        {
+            try
+            {
+                var projects = projectDAL.GetAllProjects();
+                var activeProjects = projectDAL.GetActiveProjects();
+                var blogs = blogPostDAL.GetAllBlogPosts();
+                var messages = contactMessageDAL.GetAllMessages();
+
+                lblProjectCount.Text = projects.Count.ToString();
+                lblActiveProjectCount.Text = activeProjects.Count.ToString();
+                lblBlogCount.Text = blogs.Count.ToString();
+                lblMessageCount.Text = messages.Count.ToString();
+            }
+            catch (Exception ex)
+            {
+                // Log error or show user-friendly message
+                Response.Write($"<script>alert('Error loading dashboard: {ex.Message}');</script>");
+            }
+        }
+
+        private void LoadProjectsData()
+        {
+            try
+            {
+                var projects = projectDAL.GetAllProjects();
+                gvProjects.DataSource = projects;
+                gvProjects.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error loading projects: {ex.Message}');</script>");
+            }
+        }
+
+        private void LoadBlogsData()
+        {
+            try
+            {
+                var blogs = blogPostDAL.GetAllBlogPosts();
+                gvBlogs.DataSource = blogs;
+                gvBlogs.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error loading blogs: {ex.Message}');</script>");
+            }
+        }
+
+        private void LoadMessagesData()
+        {
+            try
+            {
+                var messages = contactMessageDAL.GetAllMessages();
+                gvMessages.DataSource = messages;
+                gvMessages.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error loading messages: {ex.Message}');</script>");
+            }
+        }
+
+        protected void gvProjects_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteProject")
+            {
+                try
+                {
+                    int projectId = Convert.ToInt32(e.CommandArgument);
+                    bool success = projectDAL.DeleteProject(projectId);
+                    
+                    if (success)
+                    {
+                        LoadProjectsData();
+                        LoadDashboardData();
+                        Response.Write("<script>alert('Project deleted successfully!');</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Failed to delete project.');</script>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write($"<script>alert('Error deleting project: {ex.Message}');</script>");
+                }
+            }
+        }
+
+        protected void gvBlogs_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteBlog")
+            {
+                try
+                {
+                    int blogId = Convert.ToInt32(e.CommandArgument);
+                    bool success = blogPostDAL.DeleteBlogPost(blogId);
+                    
+                    if (success)
+                    {
+                        LoadBlogsData();
+                        LoadDashboardData();
+                        Response.Write("<script>alert('Blog post deleted successfully!');</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Failed to delete blog post.');</script>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write($"<script>alert('Error deleting blog post: {ex.Message}');</script>");
+                }
+            }
+        }
+
+        protected void gvMessages_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "DeleteMessage")
+            {
+                try
+                {
+                    int messageId = Convert.ToInt32(e.CommandArgument);
+                    bool success = contactMessageDAL.DeleteMessage(messageId);
+                    
+                    if (success)
+                    {
+                        LoadMessagesData();
+                        LoadDashboardData();
+                        Response.Write("<script>alert('Message deleted successfully!');</script>");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Failed to delete message.');</script>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write($"<script>alert('Error deleting message: {ex.Message}');</script>");
+                }
+            }
+        }
+
+        protected void btnRefreshMessages_Click(object sender, EventArgs e)
+        {
+            LoadMessagesData();
+            LoadDashboardData();
+        }
+    }
+}

@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.UI;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class BlogsAPI : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Set response headers for JSON and CORS
+            Response.ContentType = "application/json";
+            Response.AddHeader("Access-Control-Allow-Origin", "*");
+            Response.AddHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+            Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
+
+            try
+            {
+                BlogPostDAL blogPostDAL = new BlogPostDAL();
+                List<BlogPost> blogPosts = blogPostDAL.GetActiveBlogPosts();
+                
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                string jsonResponse = serializer.Serialize(blogPosts);
+                
+                Response.Write(jsonResponse);
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                Response.Write($"{{\"error\": \"Failed to retrieve blog posts: {ex.Message}\"}}");
+            }
+            
+            Response.End();
+        }
+    }
+}

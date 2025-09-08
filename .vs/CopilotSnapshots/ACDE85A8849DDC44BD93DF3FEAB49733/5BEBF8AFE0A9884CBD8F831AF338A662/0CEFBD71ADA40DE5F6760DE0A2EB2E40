@@ -1,0 +1,194 @@
+﻿using System;
+using System.Web;
+using System.Web.UI;
+using System.Web.Script.Serialization;
+using TawhidPortfolio.Models;
+using TawhidPortfolio.DataAccess;
+
+namespace TawhidPortfolio
+{
+    public partial class ContactAPI : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // Set response content type to JSON
+                Response.ContentType = "application/json";
+                
+                // Enable CORS for cross-origin requests
+                Response.Headers.Add("Access-Control-Allow-Origin", "*");
+                Response.Headers.Add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+                Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type");
+
+                // Handle preflight OPTIONS request
+                if (Request.HttpMethod == "OPTIONS")
+                {
+                    Response.StatusCode = 200;
+                    Response.End();
+                    return;
+                }
+
+                // Log the request for debugging
+                System.Diagnostics.Debug.WriteLine($"ContactAPI: Received {Request.HttpMethod} request");
+                System.Diagnostics.Debug.WriteLine($"ContactAPI: Content-Length: {Request.ContentLength}");
+                System.Diagnostics.Debug.WriteLine($"ContactAPI: Content-Type: {Request.ContentType}");
+
+                // Only accept POST requests for form submission
+                if (Request.HttpMethod == "POST")
+                {
+                    ProcessContactForm();
+                }
+                else
+                {
+                    // Return error for non-POST requests
+                    Response.StatusCode = 405; // Method Not Allowed
+                    JavaScriptSerializer js = new JavaScriptSerializer();
+                    string jsonResponse = js.Serialize(new { 
+                        success = false, 
+                        message = "Only POST method is allowed" 
+                    });
+                    Response.Write(jsonResponse);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Top-level error handler
+                System.Diagnostics.Debug.WriteLine($"ContactAPI Page_Load Error: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"ContactAPI Stack Trace: {ex.StackTrace}");
+                
+                Response.StatusCode = 500;
+                Response.ContentType = "application/json";
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                string errorResponse = js.Serialize(new { 
+                    success = false, 
+                    message = $"Server error: {ex.Message}",
+                    error = ex.ToString()
+                });
+                Response.Write(errorResponse);
+            }
+        }
+
+        private void ProcessContactForm()
+        {
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("ContactAPI: Starting ProcessContactForm");
+                
+                // Handle form-encoded data (most common for HTML forms)
+                string name = Request.Form["name"] ?? "";
+                string email = Request.Form["email"] ?? "";
+                string subject = Request.Form["subject"] ?? "";
+                string message = Request.Form["message"] ?? "";
+
+                System.Diagnostics.Debug.WriteLine($"ContactAPI: Form data - Name: {name}, Email: {email}, Subject: {subject}");
+
+                // Create contact message object
+                ContactMessage contactMessage = new ContactMessage
+                {
+                    Name = name.Trim(),
+                    Email = email.Trim(),
+                    Subject = subject.Trim(),
+                    Message = message.Trim()
+                };
+
+                // Validate the data
+                if (ValidateContactMessage(contactMessage))
+                {
+                    System.Diagnostics.Debug.WriteLine("ContactAPI: Validation passed, saving to database");
+                    
+                    // Save to database
+                    ContactMessageDAL dal = new ContactMessageDAL();
+                    bool success = dal.InsertContactMessage(contactMessage);
+
+                    if (success)
+                    {
+                        System.Diagnostics.Debug.WriteLine("ContactAPI: Message saved successfully");
+                        Response.StatusCode = 200;
+                        string successResponse = js.Serialize(new { 
+                            success = true, 
+                            message = "Message sent successfully!" 
+                        });
+                        Response.Write(successResponse);
+                    }
+                    else
+                    {
+                        System.Diagnostics.Debug.WriteLine("ContactAPI: Failed to save message to database");
+                        Response.StatusCode = 500;
+                        string errorResponse = js.Serialize(new { 
+                            success = false, 
+                            message = "Failed to save message. Please try again." 
+                        });
+                        Response.Write(errorResponse);
+                    }
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("ContactAPI: Validation failed");
+                    Response.StatusCode = 400;
+                    string validationResponse = js.Serialize(new { 
+                        success = false, 
+                        message = "Please fill in all required fields with valid data." 
+                    });
+                    Response.Write(validationResponse);
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"ContactAPI ProcessContactForm Error: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"ContactAPI Stack Trace: {ex.StackTrace}");
+                
+                Response.StatusCode = 500;
+                string errorResponse = js.Serialize(new { 
+                    success = false, 
+                    message = $"An error occurred while processing your request: {ex.Message}",
+                    error = ex.ToString()
+                });
+                Response.Write(errorResponse);
+            }
+        }
+
+        private bool ValidateContactMessage(ContactMessage message)
+        {
+            try
+            {
+                // Basic validation
+                if (string.IsNullOrWhiteSpace(message.Name) ||
+                    string.IsNullOrWhiteSpace(message.Email) ||
+                    string.IsNullOrWhiteSpace(message.Subject) ||
+                    string.IsNullOrWhiteSpace(message.Message))
+                {
+                    System.Diagnostics.Debug.WriteLine("ContactAPI: Validation failed - missing required fields");
+                    return false;
+                }
+
+                // Email validation (basic)
+                if (!message.Email.Contains("@") || !message.Email.Contains("."))
+                {
+                    System.Diagnostics.Debug.WriteLine("ContactAPI: Validation failed - invalid email format");
+                    return false;
+                }
+
+                // Length validation
+                if (message.Name.Length > 100 ||
+                    message.Email.Length > 255 ||
+                    message.Subject.Length > 255 ||
+                    message.Message.Length > 4000)
+                {
+                    System.Diagnostics.Debug.WriteLine("ContactAPI: Validation failed - field length exceeded");
+                    return false;
+                }
+
+                System.Diagnostics.Debug.WriteLine("ContactAPI: Validation passed");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"ContactAPI Validation Error: {ex.Message}");
+                return false;
+            }
+        }
+    }
+}

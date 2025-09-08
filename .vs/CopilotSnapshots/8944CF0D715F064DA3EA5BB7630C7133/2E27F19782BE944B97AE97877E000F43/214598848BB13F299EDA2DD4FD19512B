@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.UI;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class ProjectsAPI : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Set response headers for JSON and CORS
+            Response.ContentType = "application/json";
+            Response.AddHeader("Access-Control-Allow-Origin", "*");
+            Response.AddHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+            Response.AddHeader("Access-Control-Allow-Headers", "Content-Type");
+
+            try
+            {
+                ProjectDAL projectDAL = new ProjectDAL();
+                List<Project> projects = projectDAL.GetActiveProjects();
+                
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                string jsonResponse = serializer.Serialize(projects);
+                
+                Response.Write(jsonResponse);
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                Response.Write($"{{\"error\": \"Failed to retrieve projects: {ex.Message}\"}}");
+            }
+            
+            Response.End();
+        }
+    }
+}

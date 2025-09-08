@@ -1,0 +1,41 @@
+﻿-- SQL Script to create the TawhidPortfolioDB database and ContactMessages table
+-- Run this script in SQL Server Management Studio (SSMS)
+
+-- Create Database (run this first if database doesn't exist)
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'TawhidPortfolioDB')
+BEGIN
+    CREATE DATABASE TawhidPortfolioDB;
+END
+GO
+
+-- Use the database
+USE TawhidPortfolioDB;
+GO
+
+-- Create ContactMessages table
+IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='ContactMessages' AND xtype='U')
+BEGIN
+    CREATE TABLE ContactMessages (
+        Id INT IDENTITY(1,1) PRIMARY KEY,
+        Name NVARCHAR(100) NOT NULL,
+        Email NVARCHAR(255) NOT NULL,
+        Subject NVARCHAR(255) NOT NULL,
+        Message NVARCHAR(MAX) NOT NULL,
+        CreatedAt DATETIME NOT NULL DEFAULT GETDATE()
+    );
+END
+GO
+
+-- Create an index on CreatedAt for better performance when ordering by date
+CREATE NONCLUSTERED INDEX IX_ContactMessages_CreatedAt 
+ON ContactMessages (CreatedAt DESC);
+GO
+
+-- Optional: Insert sample data for testing
+INSERT INTO ContactMessages (Name, Email, Subject, Message)
+VALUES 
+    ('John Doe', 'john.doe@example.com', 'Test Subject', 'This is a test message.'),
+    ('Jane Smith', 'jane.smith@example.com', 'Portfolio Inquiry', 'I love your portfolio! Can we discuss a project?');
+GO
+
+SELECT 'Database and table created successfully!' AS Status;

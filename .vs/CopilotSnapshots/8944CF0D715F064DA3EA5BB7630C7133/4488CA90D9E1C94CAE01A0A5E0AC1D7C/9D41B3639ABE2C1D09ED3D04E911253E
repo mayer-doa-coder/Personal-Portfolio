@@ -1,0 +1,178 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio.DataAccess
+{
+    public class ContactMessageDAL
+    {
+        private readonly string connectionString;
+
+        public ContactMessageDAL()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        }
+
+        /// <summary>
+        /// Insert a new contact message into the database
+        /// </summary>
+        /// <param name="message">ContactMessage object to insert</param>
+        /// <returns>True if successful, false otherwise</returns>
+        public bool InsertContactMessage(ContactMessage message)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = @"INSERT INTO ContactMessages (Name, Email, Subject, Message, CreatedAt) 
+                                   VALUES (@Name, @Email, @Subject, @Message, @CreatedAt)";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Name", message.Name ?? string.Empty);
+                        command.Parameters.AddWithValue("@Email", message.Email ?? string.Empty);
+                        command.Parameters.AddWithValue("@Subject", message.Subject ?? string.Empty);
+                        command.Parameters.AddWithValue("@Message", message.Message ?? string.Empty);
+                        command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
+
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (you can implement logging as needed)
+                System.Diagnostics.Debug.WriteLine($"Error inserting contact message: {ex.Message}");
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Get all contact messages from the database
+        /// </summary>
+        /// <returns>List of ContactMessage objects</returns>
+        public List<ContactMessage> GetAllContactMessages()
+        {
+            List<ContactMessage> messages = new List<ContactMessage>();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = @"SELECT Id, Name, Email, Subject, Message, CreatedAt 
+                                   FROM ContactMessages 
+                                   ORDER BY CreatedAt DESC";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ContactMessage message = new ContactMessage
+                                {
+                                    Id = Convert.ToInt32(reader["Id"]),
+                                    Name = reader["Name"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Subject = reader["Subject"].ToString(),
+                                    Message = reader["Message"].ToString(),
+                                    CreatedAt = Convert.ToDateTime(reader["CreatedAt"])
+                                };
+                                messages.Add(message);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                System.Diagnostics.Debug.WriteLine($"Error retrieving contact messages: {ex.Message}");
+            }
+
+            return messages;
+        }
+
+        /// <summary>
+        /// Get a specific contact message by ID
+        /// </summary>
+        /// <param name="id">Message ID</param>
+        /// <returns>ContactMessage object or null if not found</returns>
+        public ContactMessage GetContactMessageById(int id)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = @"SELECT Id, Name, Email, Subject, Message, CreatedAt 
+                                   FROM ContactMessages 
+                                   WHERE Id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+                        
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return new ContactMessage
+                                {
+                                    Id = Convert.ToInt32(reader["Id"]),
+                                    Name = reader["Name"].ToString(),
+                                    Email = reader["Email"].ToString(),
+                                    Subject = reader["Subject"].ToString(),
+                                    Message = reader["Message"].ToString(),
+                                    CreatedAt = Convert.ToDateTime(reader["CreatedAt"])
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error retrieving contact message by ID: {ex.Message}");
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Delete a contact message by ID
+        /// </summary>
+        /// <param name="id">Message ID to delete</param>
+        /// <returns>True if successful, false otherwise</returns>
+        public bool DeleteContactMessage(int id)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM ContactMessages WHERE Id = @Id";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Id", id);
+                        
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error deleting contact message: {ex.Message}");
+                return false;
+            }
+        }
+    }
+}

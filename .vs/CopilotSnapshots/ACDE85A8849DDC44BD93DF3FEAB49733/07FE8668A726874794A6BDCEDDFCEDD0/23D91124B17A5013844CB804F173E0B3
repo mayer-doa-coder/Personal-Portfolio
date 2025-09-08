@@ -1,0 +1,207 @@
+﻿using System;
+using System.Web;
+using System.Web.UI;
+using System.Web.Script.Serialization;
+using TawhidPortfolio.Models;
+using TawhidPortfolio.DataAccess;
+
+namespace TawhidPortfolio
+{
+    public partial class ContactAPI : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            // Set response content type to JSON
+            Response.ContentType = "application/json";
+            
+            // Enable CORS for cross-origin requests (if your frontend is on a different port/domain)
+            Response.Headers.Add("Access-Control-Allow-Origin", "*");
+            Response.Headers.Add("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
+            Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type");
+
+            // Handle preflight OPTIONS request
+            if (Request.HttpMethod == "OPTIONS")
+            {
+                Response.StatusCode = 200;
+                Response.End();
+                return;
+            }
+
+            // Only accept POST requests for form submission
+            if (Request.HttpMethod == "POST")
+            {
+                ProcessContactForm();
+            }
+            else
+            {
+                // Return error for non-POST requests
+                Response.StatusCode = 405; // Method Not Allowed
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                string jsonResponse = js.Serialize(new { 
+                    success = false, 
+                    message = "Only POST method is allowed" 
+                });
+                Response.Write(jsonResponse);
+            }
+        }
+
+        private void ProcessContactForm()
+        {
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            
+            try
+            {
+                // Read the JSON data from the request body
+                string jsonData = "";
+                using (var reader = new System.IO.StreamReader(Request.InputStream))
+                {
+                    jsonData = reader.ReadToEnd();
+                }
+
+                // If no JSON data, try to get form data
+                if (string.IsNullOrEmpty(jsonData))
+                {
+                    // Handle form-encoded data
+                    string name = Request.Form["name"] ?? "";
+                    string email = Request.Form["email"] ?? "";
+                    string subject = Request.Form["subject"] ?? "";
+                    string message = Request.Form["message"] ?? "";
+
+                    // Create contact message object
+                    ContactMessage contactMessage = new ContactMessage
+                    {
+                        Name = name.Trim(),
+                        Email = email.Trim(),
+                        Subject = subject.Trim(),
+                        Message = message.Trim()
+                    };
+
+                    // Validate the data
+                    if (ValidateContactMessage(contactMessage))
+                    {
+                        // Save to database
+                        ContactMessageDAL dal = new ContactMessageDAL();
+                        bool success = dal.InsertContactMessage(contactMessage);
+
+                        if (success)
+                        {
+                            Response.StatusCode = 200;
+                            string successResponse = js.Serialize(new { 
+                                success = true, 
+                                message = "Message sent successfully!" 
+                            });
+                            Response.Write(successResponse);
+                        }
+                        else
+                        {
+                            Response.StatusCode = 500;
+                            string errorResponse = js.Serialize(new { 
+                                success = false, 
+                                message = "Failed to save message. Please try again." 
+                            });
+                            Response.Write(errorResponse);
+                        }
+                    }
+                    else
+                    {
+                        Response.StatusCode = 400;
+                        string validationResponse = js.Serialize(new { 
+                            success = false, 
+                            message = "Please fill in all required fields with valid data." 
+                        });
+                        Response.Write(validationResponse);
+                    }
+                }
+                else
+                {
+                    // Handle JSON data
+                    dynamic formData = js.DeserializeObject(jsonData);
+                    
+                    ContactMessage contactMessage = new ContactMessage
+                    {
+                        Name = formData["name"]?.ToString() ?? "",
+                        Email = formData["email"]?.ToString() ?? "",
+                        Subject = formData["subject"]?.ToString() ?? "",
+                        Message = formData["message"]?.ToString() ?? ""
+                    };
+
+                    // Validate and save (same logic as above)
+                    if (ValidateContactMessage(contactMessage))
+                    {
+                        ContactMessageDAL dal = new ContactMessageDAL();
+                        bool success = dal.InsertContactMessage(contactMessage);
+
+                        if (success)
+                        {
+                            Response.StatusCode = 200;
+                            string successResponse = js.Serialize(new { 
+                                success = true, 
+                                message = "Message sent successfully!" 
+                            });
+                            Response.Write(successResponse);
+                        }
+                        else
+                        {
+                            Response.StatusCode = 500;
+                            string errorResponse = js.Serialize(new { 
+                                success = false, 
+                                message = "Failed to save message. Please try again." 
+                            });
+                            Response.Write(errorResponse);
+                        }
+                    }
+                    else
+                    {
+                        Response.StatusCode = 400;
+                        string validationResponse = js.Serialize(new { 
+                            success = false, 
+                            message = "Please fill in all required fields with valid data." 
+                        });
+                        Response.Write(validationResponse);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                string errorResponse = js.Serialize(new { 
+                    success = false, 
+                    message = "An error occurred while processing your request." 
+                });
+                Response.Write(errorResponse);
+                
+                // Log the exception for debugging
+                System.Diagnostics.Debug.WriteLine($"Contact form error: {ex.Message}");
+            }
+        }
+
+        private bool ValidateContactMessage(ContactMessage message)
+        {
+            // Basic validation
+            if (string.IsNullOrWhiteSpace(message.Name) ||
+                string.IsNullOrWhiteSpace(message.Email) ||
+                string.IsNullOrWhiteSpace(message.Subject) ||
+                string.IsNullOrWhiteSpace(message.Message))
+            {
+                return false;
+            }
+
+            // Email validation (basic)
+            if (!message.Email.Contains("@") || !message.Email.Contains("."))
+            {
+                return false;
+            }
+
+            // Length validation
+            if (message.Name.Length > 100 ||
+                message.Email.Length > 255 ||
+                message.Subject.Length > 255 ||
+                message.Message.Length > 4000)
+            {
+                return false;
+            }
+
+            return true;
+        }
+    }
+}

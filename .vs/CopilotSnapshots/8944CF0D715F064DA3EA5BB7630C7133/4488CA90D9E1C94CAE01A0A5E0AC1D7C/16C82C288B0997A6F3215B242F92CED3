@@ -1,0 +1,186 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio.DataAccess
+{
+    public class ProjectDAL
+    {
+        private readonly string connectionString;
+
+        public ProjectDAL()
+        {
+            connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        }
+
+        public List<Project> GetAllProjects()
+        {
+            List<Project> projects = new List<Project>();
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Id, Title, Description, ImageUrl, ProjectUrl, CreatedAt, UpdatedAt, IsActive FROM Projects ORDER BY CreatedAt DESC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            projects.Add(new Project
+                            {
+                                Id = reader.GetInt32("Id"),
+                                Title = reader.GetString("Title"),
+                                Description = reader.GetString("Description"),
+                                ImageUrl = reader.IsDBNull("ImageUrl") ? "" : reader.GetString("ImageUrl"),
+                                ProjectUrl = reader.IsDBNull("ProjectUrl") ? "" : reader.GetString("ProjectUrl"),
+                                CreatedAt = reader.GetDateTime("CreatedAt"),
+                                UpdatedAt = reader.GetDateTime("UpdatedAt"),
+                                IsActive = reader.GetBoolean("IsActive")
+                            });
+                        }
+                    }
+                }
+            }
+            
+            return projects;
+        }
+
+        public List<Project> GetActiveProjects()
+        {
+            List<Project> projects = new List<Project>();
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Id, Title, Description, ImageUrl, ProjectUrl, CreatedAt, UpdatedAt, IsActive FROM Projects WHERE IsActive = 1 ORDER BY CreatedAt DESC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            projects.Add(new Project
+                            {
+                                Id = reader.GetInt32("Id"),
+                                Title = reader.GetString("Title"),
+                                Description = reader.GetString("Description"),
+                                ImageUrl = reader.IsDBNull("ImageUrl") ? "" : reader.GetString("ImageUrl"),
+                                ProjectUrl = reader.IsDBNull("ProjectUrl") ? "" : reader.GetString("ProjectUrl"),
+                                CreatedAt = reader.GetDateTime("CreatedAt"),
+                                UpdatedAt = reader.GetDateTime("UpdatedAt"),
+                                IsActive = reader.GetBoolean("IsActive")
+                            });
+                        }
+                    }
+                }
+            }
+            
+            return projects;
+        }
+
+        public Project GetProjectById(int id)
+        {
+            Project project = null;
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT Id, Title, Description, ImageUrl, ProjectUrl, CreatedAt, UpdatedAt, IsActive FROM Projects WHERE Id = @Id";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            project = new Project
+                            {
+                                Id = reader.GetInt32("Id"),
+                                Title = reader.GetString("Title"),
+                                Description = reader.GetString("Description"),
+                                ImageUrl = reader.IsDBNull("ImageUrl") ? "" : reader.GetString("ImageUrl"),
+                                ProjectUrl = reader.IsDBNull("ProjectUrl") ? "" : reader.GetString("ProjectUrl"),
+                                CreatedAt = reader.GetDateTime("CreatedAt"),
+                                UpdatedAt = reader.GetDateTime("UpdatedAt"),
+                                IsActive = reader.GetBoolean("IsActive")
+                            };
+                        }
+                    }
+                }
+            }
+            
+            return project;
+        }
+
+        public int InsertProject(Project project)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"INSERT INTO Projects (Title, Description, ImageUrl, ProjectUrl, CreatedAt, UpdatedAt, IsActive) 
+                                VALUES (@Title, @Description, @ImageUrl, @ProjectUrl, @CreatedAt, @UpdatedAt, @IsActive);
+                                SELECT SCOPE_IDENTITY();";
+                
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Title", project.Title);
+                    command.Parameters.AddWithValue("@Description", project.Description);
+                    command.Parameters.AddWithValue("@ImageUrl", project.ImageUrl ?? "");
+                    command.Parameters.AddWithValue("@ProjectUrl", project.ProjectUrl ?? "");
+                    command.Parameters.AddWithValue("@CreatedAt", DateTime.Now);
+                    command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
+                    command.Parameters.AddWithValue("@IsActive", project.IsActive);
+                    
+                    connection.Open();
+                    return Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+        }
+
+        public bool UpdateProject(Project project)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = @"UPDATE Projects SET 
+                                Title = @Title, 
+                                Description = @Description, 
+                                ImageUrl = @ImageUrl, 
+                                ProjectUrl = @ProjectUrl, 
+                                UpdatedAt = @UpdatedAt, 
+                                IsActive = @IsActive 
+                                WHERE Id = @Id";
+                
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", project.Id);
+                    command.Parameters.AddWithValue("@Title", project.Title);
+                    command.Parameters.AddWithValue("@Description", project.Description);
+                    command.Parameters.AddWithValue("@ImageUrl", project.ImageUrl ?? "");
+                    command.Parameters.AddWithValue("@ProjectUrl", project.ProjectUrl ?? "");
+                    command.Parameters.AddWithValue("@UpdatedAt", DateTime.Now);
+                    command.Parameters.AddWithValue("@IsActive", project.IsActive);
+                    
+                    connection.Open();
+                    return command.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+
+        public bool DeleteProject(int id)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "DELETE FROM Projects WHERE Id = @Id";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Id", id);
+                    connection.Open();
+                    return command.ExecuteNonQuery() > 0;
+                }
+            }
+        }
+    }
+}

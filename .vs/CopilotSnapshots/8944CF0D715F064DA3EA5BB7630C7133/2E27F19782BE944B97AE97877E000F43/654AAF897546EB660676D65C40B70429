@@ -1,0 +1,75 @@
+﻿using System;
+using System.Web;
+using System.Web.UI;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class BlogsAPI : Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                // Set response headers for CORS and JSON
+                Response.ContentType = "application/json";
+                Response.AppendHeader("Access-Control-Allow-Origin", "*");
+                Response.AppendHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+                Response.AppendHeader("Access-Control-Allow-Headers", "Content-Type");
+                
+                // Handle preflight OPTIONS request
+                if (Request.HttpMethod == "OPTIONS")
+                {
+                    Response.StatusCode = 200;
+                    Response.End();
+                    return;
+                }
+
+                BlogDAL blogDAL = new BlogDAL();  // Changed from BlogPostDAL
+                List<Blog> blogs = blogDAL.GetAllBlogs();  // Changed from BlogPosts
+
+                // Convert to JSON-friendly format
+                var blogsData = new List<object>();
+                foreach (var blog in blogs)
+                {
+                    // Create description from content (first 150 characters)
+                    string description = blog.Content;
+                    if (!string.IsNullOrEmpty(description) && description.Length > 150)
+                    {
+                        // Remove HTML tags for description
+                        description = System.Text.RegularExpressions.Regex.Replace(description, "<.*?>", string.Empty);
+                        description = description.Substring(0, 150) + "...";
+                    }
+
+                    blogsData.Add(new
+                    {
+                        Id = blog.Id,
+                        Title = blog.Title,
+                        Description = description,
+                        Content = blog.Content,
+                        ImageUrl = string.IsNullOrEmpty(blog.ImageUrl) ? "assets/images/blog-placeholder.jpg" : blog.ImageUrl,
+                        CreatedAt = blog.CreatedAt.ToString("yyyy-MM-dd")
+                    });
+                }
+
+                string json = JsonConvert.SerializeObject(blogsData, Formatting.Indented);
+                Response.Write(json);
+            }
+            catch (Exception ex)
+            {
+                Response.StatusCode = 500;
+                Response.Write(JsonConvert.SerializeObject(new { 
+                    error = "Internal server error", 
+                    message = ex.Message 
+                }, Formatting.Indented));
+            }
+            finally
+            {
+                Response.End();
+            }
+        }
+    }
+}

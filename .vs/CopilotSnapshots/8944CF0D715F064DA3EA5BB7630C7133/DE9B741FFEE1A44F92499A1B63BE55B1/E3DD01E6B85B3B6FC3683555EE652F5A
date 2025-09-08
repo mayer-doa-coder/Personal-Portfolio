@@ -1,0 +1,144 @@
+﻿using System;
+using System.Text.RegularExpressions;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class ManageBlog : Page
+    {
+        // Control declarations
+        protected Literal litPageTitle;
+        protected TextBox txtTitle;
+        protected TextBox txtSlug;
+        protected TextBox txtDescription;
+        protected TextBox txtContent;
+        protected TextBox txtImageUrl;
+        protected CheckBox chkIsActive;
+        protected Button btnSave;
+
+        private BlogPostDAL blogPostDAL = new BlogPostDAL();
+        private int blogId = 0;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                // Check if editing existing blog post
+                if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out blogId))
+                {
+                    LoadBlogPost(blogId);
+                    litPageTitle.Text = "Edit Blog Post";
+                    btnSave.Text = "Update Blog Post";
+                }
+                else
+                {
+                    litPageTitle.Text = "Add New Blog Post";
+                    btnSave.Text = "Save Blog Post";
+                }
+            }
+        }
+
+        private void LoadBlogPost(int id)
+        {
+            try
+            {
+                BlogPost blogPost = blogPostDAL.GetBlogPostById(id);
+                if (blogPost != null)
+                {
+                    txtTitle.Text = blogPost.Title;
+                    txtSlug.Text = blogPost.Slug;
+                    txtDescription.Text = blogPost.Description;
+                    txtContent.Text = blogPost.Content;
+                    txtImageUrl.Text = blogPost.ImageUrl;
+                    chkIsActive.Checked = blogPost.IsActive;
+                    ViewState["BlogId"] = blogPost.Id;
+                }
+                else
+                {
+                    Response.Redirect("AdminPanel.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error loading blog post: {ex.Message}');</script>");
+            }
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                try
+                {
+                    string slug = txtSlug.Text.Trim();
+                    if (string.IsNullOrEmpty(slug))
+                    {
+                        slug = GenerateSlug(txtTitle.Text);
+                    }
+
+                    BlogPost blogPost = new BlogPost
+                    {
+                        Title = txtTitle.Text.Trim(),
+                        Slug = slug,
+                        Description = txtDescription.Text.Trim(),
+                        Content = txtContent.Text.Trim(),
+                        ImageUrl = txtImageUrl.Text.Trim(),
+                        IsActive = chkIsActive.Checked
+                    };
+
+                    bool success = false;
+                    string message = "";
+
+                    // Check if editing existing blog post
+                    if (ViewState["BlogId"] != null)
+                    {
+                        blogPost.Id = Convert.ToInt32(ViewState["BlogId"]);
+                        success = blogPostDAL.UpdateBlogPost(blogPost);
+                        message = success ? "Blog post updated successfully!" : "Failed to update blog post.";
+                    }
+                    else
+                    {
+                        int newId = blogPostDAL.InsertBlogPost(blogPost);
+                        success = newId > 0;
+                        message = success ? "Blog post added successfully!" : "Failed to add blog post.";
+                    }
+
+                    if (success)
+                    {
+                        Response.Write($"<script>alert('{message}'); window.location.href='AdminPanel.aspx';</script>");
+                    }
+                    else
+                    {
+                        Response.Write($"<script>alert('{message}');</script>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write($"<script>alert('Error saving blog post: {ex.Message}');</script>");
+                }
+            }
+        }
+
+        private string GenerateSlug(string title)
+        {
+            if (string.IsNullOrEmpty(title))
+                return "";
+
+            // Convert to lowercase
+            string slug = title.ToLower();
+
+            // Remove special characters and replace spaces with hyphens
+            slug = Regex.Replace(slug, @"[^a-z0-9\s-]", "");
+            slug = Regex.Replace(slug, @"\s+", "-");
+            slug = Regex.Replace(slug, @"-+", "-");
+            
+            // Remove leading and trailing hyphens
+            slug = slug.Trim('-');
+
+            return slug;
+        }
+    }
+}

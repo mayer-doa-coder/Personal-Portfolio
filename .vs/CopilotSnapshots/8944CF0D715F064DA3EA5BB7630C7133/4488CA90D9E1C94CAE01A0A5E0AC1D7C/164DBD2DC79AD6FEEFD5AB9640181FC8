@@ -1,0 +1,105 @@
+﻿using System;
+using System.Web.UI;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class ManageProject : Page
+    {
+        private ProjectDAL projectDAL = new ProjectDAL();
+        private int projectId = 0;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                // Check if editing existing project
+                if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out projectId))
+                {
+                    LoadProject(projectId);
+                    litPageTitle.Text = "Edit Project";
+                    btnSave.Text = "Update Project";
+                }
+                else
+                {
+                    litPageTitle.Text = "Add New Project";
+                    btnSave.Text = "Save Project";
+                }
+            }
+        }
+
+        private void LoadProject(int id)
+        {
+            try
+            {
+                Project project = projectDAL.GetProjectById(id);
+                if (project != null)
+                {
+                    txtTitle.Text = project.Title;
+                    txtDescription.Text = project.Description;
+                    txtImageUrl.Text = project.ImageUrl;
+                    txtProjectUrl.Text = project.ProjectUrl;
+                    chkIsActive.Checked = project.IsActive;
+                    ViewState["ProjectId"] = project.Id;
+                }
+                else
+                {
+                    Response.Redirect("AdminPanel.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write($"<script>alert('Error loading project: {ex.Message}');</script>");
+            }
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                try
+                {
+                    Project project = new Project
+                    {
+                        Title = txtTitle.Text.Trim(),
+                        Description = txtDescription.Text.Trim(),
+                        ImageUrl = txtImageUrl.Text.Trim(),
+                        ProjectUrl = txtProjectUrl.Text.Trim(),
+                        IsActive = chkIsActive.Checked
+                    };
+
+                    bool success = false;
+                    string message = "";
+
+                    // Check if editing existing project
+                    if (ViewState["ProjectId"] != null)
+                    {
+                        project.Id = Convert.ToInt32(ViewState["ProjectId"]);
+                        success = projectDAL.UpdateProject(project);
+                        message = success ? "Project updated successfully!" : "Failed to update project.";
+                    }
+                    else
+                    {
+                        int newId = projectDAL.InsertProject(project);
+                        success = newId > 0;
+                        message = success ? "Project added successfully!" : "Failed to add project.";
+                    }
+
+                    if (success)
+                    {
+                        Response.Write($"<script>alert('{message}'); window.location.href='AdminPanel.aspx';</script>");
+                    }
+                    else
+                    {
+                        Response.Write($"<script>alert('{message}');</script>");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write($"<script>alert('Error saving project: {ex.Message}');</script>");
+                }
+            }
+        }
+    }
+}

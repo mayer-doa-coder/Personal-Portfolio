@@ -1,0 +1,147 @@
+﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class ManageProject : Page
+    {
+        // Control declarations
+        protected Literal litPageTitle;
+        protected TextBox txtTitle;
+        protected TextBox txtDescription;
+        protected TextBox txtTechStack;
+        protected TextBox txtImageUrl;
+        protected TextBox txtProjectLink;
+        protected Button btnSave;
+        protected Panel pnlError;
+        protected Label lblError;
+        protected Panel pnlSuccess;
+        protected Label lblSuccess;
+
+        private ProjectDAL projectDAL = new ProjectDAL();
+        private int projectId = 0;
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!IsPostBack)
+                {
+                    // Check if editing existing project
+                    if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out projectId))
+                    {
+                        LoadProject(projectId);
+                        litPageTitle.Text = "Edit Project";
+                        btnSave.Text = "Update Project";
+                    }
+                    else
+                    {
+                        litPageTitle.Text = "Add New Project";
+                        btnSave.Text = "Save Project";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Page Load Error: " + ex.Message);
+            }
+        }
+
+        private void LoadProject(int id)
+        {
+            try
+            {
+                Project project = projectDAL.GetProjectById(id);
+                if (project != null)
+                {
+                    txtTitle.Text = project.Title;
+                    txtDescription.Text = project.Description;
+                    txtTechStack.Text = project.TechStack;
+                    txtImageUrl.Text = project.ImageUrl;
+                    txtProjectLink.Text = project.ProjectLink;
+                    ViewState["ProjectId"] = project.Id;
+                }
+                else
+                {
+                    ShowError("Project not found.");
+                    Response.Redirect("AdminPanel.aspx");
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Error loading project: " + ex.Message);
+            }
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Clear previous messages
+                pnlError.Visible = false;
+                pnlSuccess.Visible = false;
+
+                if (Page.IsValid)
+                {
+                    Project project = new Project
+                    {
+                        Title = txtTitle.Text.Trim(),
+                        Description = txtDescription.Text.Trim(),
+                        TechStack = txtTechStack.Text.Trim(),
+                        ImageUrl = txtImageUrl.Text.Trim(),
+                        ProjectLink = txtProjectLink.Text.Trim()
+                    };
+
+                    bool success = false;
+                    string message = "";
+
+                    // Check if editing existing project
+                    if (ViewState["ProjectId"] != null)
+                    {
+                        project.Id = Convert.ToInt32(ViewState["ProjectId"]);
+                        success = projectDAL.UpdateProject(project);
+                        message = success ? "Project updated successfully!" : "Failed to update project.";
+                    }
+                    else
+                    {
+                        int newId = projectDAL.InsertProject(project);
+                        success = newId > 0;
+                        message = success ? "Project added successfully!" : "Failed to add project.";
+                    }
+
+                    if (success)
+                    {
+                        ShowSuccess(message);
+                        // Redirect to admin panel after a short delay
+                        Response.Write("<script>setTimeout(function(){ window.location.href='AdminPanel.aspx'; }, 2000);</script>");
+                    }
+                    else
+                    {
+                        ShowError(message);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Error saving project: " + ex.Message);
+            }
+        }
+
+        private void ShowError(string message)
+        {
+            pnlError.Visible = true;
+            pnlSuccess.Visible = false;
+            lblError.Text = message;
+        }
+
+        private void ShowSuccess(string message)
+        {
+            pnlSuccess.Visible = true;
+            pnlError.Visible = false;
+            lblSuccess.Text = message;
+        }
+    }
+}
