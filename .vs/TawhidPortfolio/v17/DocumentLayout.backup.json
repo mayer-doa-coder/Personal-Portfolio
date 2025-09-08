@@ -1,189 +1,189 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\",
+  "WorkspaceRootPath": "E:\\tawhid portfolio updated\\Personal-Portfolio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|d:\\last done portfolio\\personal-portfolio-backend\\tawhidportfolio\\tawhidportfolio\\adminpanel.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\adminpanel.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\manageblog.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageblog.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\manageproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\manageproject.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageproject.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\dataaccess\\blogpostdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\dataaccess\\blogpostdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|e:\\tawhid portfolio updated\\personal-portfolio\\tawhidportfolio\\front_end\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\home.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\adminmessages.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\adminpanel.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\adminpanel.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\manageblog.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageblog.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\manageproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageproject.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\manageproject.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageproject.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\dataaccess\\blogpostdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\dataaccess\\blogpostdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\database\\createdatabase.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\adminmessages.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\adminmessages.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\database_fix_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\database_fix_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\database_fix_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\assets\\css\\style.css||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\front_end\\assets\\css\\style.css||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\assets\\css\\style.css||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\front_end\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\assets\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\quickdbtest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\quickdbtest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\quickdbtest.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\dataaccess\\projectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\dataaccess\\projectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\dataaccess\\projectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\contactapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\contactapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\contactapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\adminmessages.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\adminmessages.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\adminmessages.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\testcontactform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\testcontactform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\testcontactform.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\manageblog.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\manageblog.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\manageblog.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\admin_panel_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\admin_panel_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\admin_panel_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\database\\datarecoveryscript.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\database\\datarecoveryscript.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\database\\datarecoveryscript.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\dataaccess\\blogdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\dataaccess\\blogdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\dataaccess\\blogdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\schema_sync_complete.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\schema_sync_complete.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\schema_sync_complete.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\database\\completedbsetup.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\database\\completedbsetup.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\database\\completedbsetup.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\quickdbtest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\quickdbtest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\quickdbtest.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\debug.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\front_end\\debug.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\debug.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\assets\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\front_end\\assets\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\assets\\js\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\quickstart.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\testcontactform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\testcontactform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\testcontactform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\dataaccess\\contactmessagedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\dataaccess\\contactmessagedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\dataaccess\\contactmessagedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\contactapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\contactapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\contactapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\assets\\css\\notifications.css||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\front_end\\assets\\css\\notifications.css||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\assets\\css\\notifications.css||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\models\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\adminpanel.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\adminpanel.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\adminpanel.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\projectsapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\projectsapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\projectsapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\projectsapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\projectsapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\projectsapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\blogsapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\blogsapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\blogsapi.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\blogsapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\blogsapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\blogsapi.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\error_fix_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\error_fix_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\error_fix_guide.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\database_solution_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\database_solution_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\database_solution_summary.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\tawhidportfolio\\front_end\\formspree_setup.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "AbsoluteMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|E:\\tawhid portfolio updated\\Personal-Portfolio\\tawhidportfolio\\front_end\\formspree_setup.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
       "RelativeMoniker": "D:0:0:{A6480349-2A58-4474-BB73-AC842EC9512A}|TawhidPortfolio\\TawhidPortfolio.csproj|solutionrelative:tawhidportfolio\\front_end\\formspree_setup.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
     }
   ],
@@ -194,15 +194,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 33,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 45,
               "Title": "FORMSPREE_SETUP.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\FORMSPREE_SETUP.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\FORMSPREE_SETUP.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\FORMSPREE_SETUP.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\FORMSPREE_SETUP.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\FORMSPREE_SETUP.md",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\FORMSPREE_SETUP.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -212,9 +212,9 @@
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "SCHEMA_SYNC_COMPLETE.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\SCHEMA_SYNC_COMPLETE.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\SCHEMA_SYNC_COMPLETE.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\SCHEMA_SYNC_COMPLETE.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\SCHEMA_SYNC_COMPLETE.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\SCHEMA_SYNC_COMPLETE.md",
               "RelativeToolTip": "TawhidPortfolio\\SCHEMA_SYNC_COMPLETE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -224,9 +224,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "BlogDAL.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\BlogDAL.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\BlogDAL.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\DataAccess\\BlogDAL.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\BlogDAL.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\BlogDAL.cs",
               "RelativeToolTip": "TawhidPortfolio\\DataAccess\\BlogDAL.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -236,9 +236,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Models\\Blog.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Models\\Blog.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Models\\Blog.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Models\\Blog.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Models\\Blog.cs",
               "RelativeToolTip": "TawhidPortfolio\\Models\\Blog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -248,9 +248,9 @@
               "$type": "Document",
               "DocumentIndex": 44,
               "Title": "DATABASE_SOLUTION_SUMMARY.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DATABASE_SOLUTION_SUMMARY.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DATABASE_SOLUTION_SUMMARY.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\DATABASE_SOLUTION_SUMMARY.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DATABASE_SOLUTION_SUMMARY.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DATABASE_SOLUTION_SUMMARY.md",
               "RelativeToolTip": "TawhidPortfolio\\DATABASE_SOLUTION_SUMMARY.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -260,9 +260,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "DATABASE_FIX_GUIDE.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DATABASE_FIX_GUIDE.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DATABASE_FIX_GUIDE.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\DATABASE_FIX_GUIDE.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DATABASE_FIX_GUIDE.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DATABASE_FIX_GUIDE.md",
               "RelativeToolTip": "TawhidPortfolio\\DATABASE_FIX_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -272,9 +272,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "QuickDbTest.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\QuickDbTest.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\QuickDbTest.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\QuickDbTest.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\QuickDbTest.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\QuickDbTest.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\QuickDbTest.aspx.cs",
               "ViewState": "AgIAAPgAAAAAAAAAAAApwAEBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -284,9 +284,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "CompleteDbSetup.sql ",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Database\\CompleteDbSetup.sql",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Database\\CompleteDbSetup.sql",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Database\\CompleteDbSetup.sql",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Database\\CompleteDbSetup.sql",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Database\\CompleteDbSetup.sql",
               "RelativeToolTip": "TawhidPortfolio\\Database\\CompleteDbSetup.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-09-03T21:28:28.518Z"
@@ -295,9 +295,9 @@
               "$type": "Document",
               "DocumentIndex": 43,
               "Title": "ERROR_FIX_GUIDE.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ERROR_FIX_GUIDE.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ERROR_FIX_GUIDE.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ERROR_FIX_GUIDE.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ERROR_FIX_GUIDE.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ERROR_FIX_GUIDE.md",
               "RelativeToolTip": "TawhidPortfolio\\ERROR_FIX_GUIDE.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAL0AAACKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -307,9 +307,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "DataRecoveryScript.sql ",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Database\\DataRecoveryScript.sql",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Database\\DataRecoveryScript.sql",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Database\\DataRecoveryScript.sql",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Database\\DataRecoveryScript.sql",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Database\\DataRecoveryScript.sql",
               "RelativeToolTip": "TawhidPortfolio\\Database\\DataRecoveryScript.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-09-03T21:11:17.262Z"
@@ -318,9 +318,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "Web.config",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Web.config",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Web.config",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Web.config",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Web.config",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Web.config",
               "RelativeToolTip": "TawhidPortfolio\\Web.config",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -331,9 +331,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "ADMIN_PANEL_GUIDE.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ADMIN_PANEL_GUIDE.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ADMIN_PANEL_GUIDE.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ADMIN_PANEL_GUIDE.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ADMIN_PANEL_GUIDE.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ADMIN_PANEL_GUIDE.md",
               "RelativeToolTip": "TawhidPortfolio\\ADMIN_PANEL_GUIDE.md",
               "ViewState": "AgIAABIAAAAAAAAAAAAAANYAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -343,9 +343,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "style.css",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\assets\\css\\style.css",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\assets\\css\\style.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -355,9 +355,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "style.css",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\assets\\css\\style.css",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\css\\style.css",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\assets\\css\\style.css",
               "ViewState": "AgIAAOgJAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -367,9 +367,9 @@
               "$type": "Document",
               "DocumentIndex": 42,
               "Title": "BlogsAPI.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\BlogsAPI.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\BlogsAPI.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\BlogsAPI.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\BlogsAPI.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\BlogsAPI.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\BlogsAPI.aspx.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAEBVwEwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -379,9 +379,9 @@
               "$type": "Document",
               "DocumentIndex": 41,
               "Title": "BlogsAPI.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\BlogsAPI.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\BlogsAPI.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\BlogsAPI.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\BlogsAPI.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\BlogsAPI.aspx",
               "RelativeToolTip": "TawhidPortfolio\\BlogsAPI.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -391,9 +391,9 @@
               "$type": "Document",
               "DocumentIndex": 40,
               "Title": "ProjectsAPI.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ProjectsAPI.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ProjectsAPI.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ProjectsAPI.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ProjectsAPI.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ProjectsAPI.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\ProjectsAPI.aspx.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAEBVwEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -403,9 +403,9 @@
               "$type": "Document",
               "DocumentIndex": 39,
               "Title": "ProjectsAPI.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ProjectsAPI.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ProjectsAPI.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ProjectsAPI.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ProjectsAPI.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ProjectsAPI.aspx",
               "RelativeToolTip": "TawhidPortfolio\\ProjectsAPI.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -415,9 +415,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "ManageBlog.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageBlog.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageBlog.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ManageBlog.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageBlog.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageBlog.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\ManageBlog.aspx.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAlwIwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -425,11 +425,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ManageBlog.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageBlog.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageBlog.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ManageBlog.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageBlog.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageBlog.aspx",
               "RelativeToolTip": "TawhidPortfolio\\ManageBlog.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -437,11 +437,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ManageProject.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageProject.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageProject.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ManageProject.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageProject.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageProject.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\ManageProject.aspx.cs",
               "ViewState": "AgIAAIoAAAAAAAAAAAAlwJIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -449,11 +449,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ManageProject.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageProject.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageProject.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ManageProject.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ManageProject.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ManageProject.aspx",
               "RelativeToolTip": "TawhidPortfolio\\ManageProject.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -463,9 +463,9 @@
               "$type": "Document",
               "DocumentIndex": 38,
               "Title": "AdminPanel.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminPanel.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminPanel.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\AdminPanel.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminPanel.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminPanel.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\AdminPanel.aspx.cs",
               "ViewState": "AgIAAPYAAAAAAAAAAABBwPcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -473,35 +473,34 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AdminPanel.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminPanel.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminPanel.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\AdminPanel.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminPanel.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminPanel.aspx",
               "RelativeToolTip": "TawhidPortfolio\\AdminPanel.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-09-03T20:17:44.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-03T20:17:44.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CreateDatabase.sql ",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Database\\CreateDatabase.sql",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Database\\CreateDatabase.sql",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Database\\CreateDatabase.sql",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Database\\CreateDatabase.sql",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Database\\CreateDatabase.sql",
               "RelativeToolTip": "TawhidPortfolio\\Database\\CreateDatabase.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-09-03T20:16:48.207Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BlogPostDAL.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\BlogPostDAL.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\BlogPostDAL.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\DataAccess\\BlogPostDAL.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\BlogPostDAL.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\BlogPostDAL.cs",
               "RelativeToolTip": "TawhidPortfolio\\DataAccess\\BlogPostDAL.cs",
               "ViewState": "AgIAALYAAAAAAAAAAAApwL8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -511,9 +510,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "ProjectDAL.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\ProjectDAL.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\ProjectDAL.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\DataAccess\\ProjectDAL.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\ProjectDAL.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\ProjectDAL.cs",
               "RelativeToolTip": "TawhidPortfolio\\DataAccess\\ProjectDAL.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAApwJkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -523,9 +522,9 @@
               "$type": "Document",
               "DocumentIndex": 37,
               "Title": "BlogPost.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Models\\BlogPost.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Models\\BlogPost.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Models\\BlogPost.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Models\\BlogPost.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Models\\BlogPost.cs",
               "RelativeToolTip": "TawhidPortfolio\\Models\\BlogPost.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -535,9 +534,9 @@
               "$type": "Document",
               "DocumentIndex": 36,
               "Title": "Project.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Models\\Project.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Models\\Project.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Models\\Project.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Models\\Project.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Models\\Project.cs",
               "RelativeToolTip": "TawhidPortfolio\\Models\\Project.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAIBYwA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -547,9 +546,9 @@
               "$type": "Document",
               "DocumentIndex": 25,
               "Title": "debug.html",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\debug.html",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\debug.html",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\debug.html",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\debug.html",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\debug.html",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\debug.html",
               "ViewState": "AgIAAIoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
@@ -559,9 +558,9 @@
               "$type": "Document",
               "DocumentIndex": 24,
               "Title": "QuickDbTest.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\QuickDbTest.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\QuickDbTest.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\QuickDbTest.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\QuickDbTest.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\QuickDbTest.aspx",
               "RelativeToolTip": "TawhidPortfolio\\QuickDbTest.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -571,9 +570,9 @@
               "$type": "Document",
               "DocumentIndex": 29,
               "Title": "QUICKSTART.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\QUICKSTART.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\QUICKSTART.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\QUICKSTART.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\QUICKSTART.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\QUICKSTART.md",
               "RelativeToolTip": "TawhidPortfolio\\QUICKSTART.md",
               "ViewState": "AgIAAC8AAAAAAAAAAAAwwDYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -583,9 +582,9 @@
               "$type": "Document",
               "DocumentIndex": 35,
               "Title": "notifications.css",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\css\\notifications.css",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\css\\notifications.css",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\assets\\css\\notifications.css",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\css\\notifications.css",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\css\\notifications.css",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\assets\\css\\notifications.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -593,23 +592,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "home.html",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\home.html",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\home.html",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\home.html",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\home.html",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\home.html",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\home.html",
-              "ViewState": "AgIAALEBAAAAAAAAAAAAALYBAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAMwBAAAAAAAAAAArwOUBAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-29T23:48:42.406Z"
+              "WhenOpened": "2025-08-29T23:48:42.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "TestContactForm.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\TestContactForm.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\TestContactForm.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\TestContactForm.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\TestContactForm.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\TestContactForm.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\TestContactForm.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -619,9 +619,9 @@
               "$type": "Document",
               "DocumentIndex": 30,
               "Title": "TestContactForm.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\TestContactForm.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\TestContactForm.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\TestContactForm.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\TestContactForm.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\TestContactForm.aspx",
               "RelativeToolTip": "TawhidPortfolio\\TestContactForm.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -631,9 +631,9 @@
               "$type": "Document",
               "DocumentIndex": 27,
               "Title": "README.md",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\README.md",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\README.md",
               "RelativeDocumentMoniker": "TawhidPortfolio\\README.md",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\README.md",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\README.md",
               "RelativeToolTip": "TawhidPortfolio\\README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAALoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -643,9 +643,9 @@
               "$type": "Document",
               "DocumentIndex": 34,
               "Title": "packages.config",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\packages.config",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\packages.config",
               "RelativeDocumentMoniker": "TawhidPortfolio\\packages.config",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\packages.config",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\packages.config",
               "RelativeToolTip": "TawhidPortfolio\\packages.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -655,9 +655,9 @@
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "script.js",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\js\\script.js",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\js\\script.js",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Front_End\\assets\\js\\script.js",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Front_End\\assets\\js\\script.js",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Front_End\\assets\\js\\script.js",
               "RelativeToolTip": "TawhidPortfolio\\Front_End\\assets\\js\\script.js",
               "ViewState": "AgIAANoCAAAAAAAAAABRwCkCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -667,9 +667,9 @@
               "$type": "Document",
               "DocumentIndex": 33,
               "Title": "Default.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Default.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Default.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Default.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Default.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Default.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\Default.aspx.cs",
               "ViewState": "AgIAAC8AAAAAAAAAAEBVwDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -679,9 +679,9 @@
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "Default.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Default.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Default.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\Default.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\Default.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\Default.aspx",
               "RelativeToolTip": "TawhidPortfolio\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -691,9 +691,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "AdminMessages.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminMessages.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminMessages.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\AdminMessages.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminMessages.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminMessages.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\AdminMessages.aspx.cs",
               "ViewState": "AgIAAFsAAAAAAAAAAAAAAFsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -703,9 +703,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "AdminMessages.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminMessages.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminMessages.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\AdminMessages.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\AdminMessages.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\AdminMessages.aspx",
               "RelativeToolTip": "TawhidPortfolio\\AdminMessages.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -715,9 +715,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "ContactAPI.aspx.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ContactAPI.aspx.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ContactAPI.aspx.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ContactAPI.aspx.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ContactAPI.aspx.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ContactAPI.aspx.cs",
               "RelativeToolTip": "TawhidPortfolio\\ContactAPI.aspx.cs",
               "ViewState": "AgIAAMEAAAAAAAAAAAAAAMEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -727,9 +727,9 @@
               "$type": "Document",
               "DocumentIndex": 32,
               "Title": "ContactAPI.aspx",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ContactAPI.aspx",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ContactAPI.aspx",
               "RelativeDocumentMoniker": "TawhidPortfolio\\ContactAPI.aspx",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\ContactAPI.aspx",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\ContactAPI.aspx",
               "RelativeToolTip": "TawhidPortfolio\\ContactAPI.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -739,9 +739,9 @@
               "$type": "Document",
               "DocumentIndex": 31,
               "Title": "ContactMessageDAL.cs",
-              "DocumentMoniker": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\ContactMessageDAL.cs",
+              "DocumentMoniker": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\ContactMessageDAL.cs",
               "RelativeDocumentMoniker": "TawhidPortfolio\\DataAccess\\ContactMessageDAL.cs",
-              "ToolTip": "D:\\last done portfolio\\Personal-Portfolio-Backend\\TawhidPortfolio\\TawhidPortfolio\\DataAccess\\ContactMessageDAL.cs",
+              "ToolTip": "E:\\tawhid portfolio updated\\Personal-Portfolio\\TawhidPortfolio\\DataAccess\\ContactMessageDAL.cs",
               "RelativeToolTip": "TawhidPortfolio\\DataAccess\\ContactMessageDAL.cs",
               "ViewState": "AgIAAL8AAAAAAAAAAEBdwMQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

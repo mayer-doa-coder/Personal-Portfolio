@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -150,13 +150,6 @@
                                         <p>Secured <span class="highlight">1st position</span> in the <span class="highlight">HACK project showcasing</span>, highlighting my ability to conceptualize, develop, and present innovative technological solutions.</p>
                                     </div>
                                 </div>
-
-                                <div class="achievement-item">
-                                    <div class="achievement-content">
-                                        <h4>International Competition Recognition</h4>
-                                        <p>Achieved <span class="highlight rating-badge">1st Runner Up</span> in the <span class="highlight">Bridging Engineering & Computer Science Competition 2025</span>, organized by <span class="highlight">ILM AI Ltd.</span> and <span class="highlight">City, St George's, University of London</span> in recognition of outstanding performance and innovation.</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,7 +165,7 @@
                     <div class="blog-grid">
                         <div class="blog-card">
                             <div class="blog-image">
-                                <img src="assets/images/blog-placeholder-1.jpg" alt="Getting Started with Competitive Programming" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaUFyIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+')">
+                                <img src="assets/images/blog-placeholder-1.jpg" alt="Getting Started with Competitive Programming" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-content-text">
@@ -185,7 +178,7 @@
 
                         <div class="blog-card">
                             <div class="blog-image">
-                                <img src="assets/images/blog-placeholder-2.jpg" alt="Modern Web Development Trends" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaUFyIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+')">
+                                <img src="assets/images/blog-placeholder-2.jpg" alt="Modern Web Development Trends" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-content-text">
@@ -198,7 +191,7 @@
 
                         <div class="blog-card">
                             <div class="blog-image">
-                                <img src="assets/images/blog-placeholder-3.jpg" alt="Building Scalable Systems" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaUFyIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+')">
+                                <img src="assets/images/blog-placeholder-3.jpg" alt="Building Scalable Systems" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-content-text">
@@ -211,7 +204,7 @@
 
                         <div class="blog-card">
                             <div class="blog-image">
-                                <img src="assets/images/blog-placeholder-4.jpg" alt="Machine Learning for Beginners" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaUFyIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+')">
+                                <img src="assets/images/blog-placeholder-4.jpg" alt="Machine Learning for Beginners" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-content-text">
@@ -224,7 +217,7 @@
 
                         <div class="blog-card">
                             <div class="blog-image">
-                                <img src="assets/images/blog-placeholder-5.jpg" alt="Software Engineering Best Practices" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaUFyIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+')">
+                                <img src="assets/images/blog-placeholder-5.jpg" alt="Software Engineering Best Practices" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-content-text">
@@ -237,7 +230,7 @@
 
                         <div class="blog-card">
                             <div class="blog-image">
-                                <img src="assets/images/blog-placeholder-6.jpg" alt="The Future of Technology" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaUFyIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+')">
+                                <img src="assets/images/blog-placeholder-6.jpg" alt="The Future of Technology" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzBhMGUyNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMDBkNGZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0cHgiPkJsb2cgUGxhY2Vob2xkZXI8L3RleHQ+PC9zdmc+'">
                             </div>
                             <div class="blog-content-area">
                                 <div class="blog-content-text">
