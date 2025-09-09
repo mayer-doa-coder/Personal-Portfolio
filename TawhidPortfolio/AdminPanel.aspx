@@ -358,6 +358,10 @@
             <div class="admin-header">
                 <h1><i class="fas fa-cog"></i> Portfolio Admin Panel</h1>
                 <p>Manage your projects, blog posts, and contact messages</p>
+                <div style="margin-top: 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <asp:Label ID="lblCurrentUser" runat="server" style="color: #8a9bb8; font-size: 14px;"></asp:Label>
+                    <asp:Button ID="btnLogout" runat="server" Text="Logout" CssClass="btn btn-secondary" OnClick="btnLogout_Click" style="padding: 8px 16px; font-size: 12px;" />
+                </div>
             </div>
 
             <div class="nav-tabs">

@@ -6,7 +6,7 @@ using TawhidPortfolio.Models;
 
 namespace TawhidPortfolio
 {
-    public partial class ManageProject : Page
+    public partial class ManageProject : AdminBasePage
     {
         // Control declarations
         protected Literal litPageTitle;
@@ -28,6 +28,9 @@ namespace TawhidPortfolio
         {
             try
             {
+                // Remove the recursive call to base.OnLoad(e)
+                // Authentication is handled automatically by AdminBasePage.OnLoad()
+                
                 if (!IsPostBack)
                 {
                     // Check if editing existing project
@@ -130,14 +133,14 @@ namespace TawhidPortfolio
             }
         }
 
-        private void ShowError(string message)
+        protected override void ShowError(string message)
         {
             pnlError.Visible = true;
             pnlSuccess.Visible = false;
             lblError.Text = message;
         }
 
-        private void ShowSuccess(string message)
+        protected override void ShowSuccess(string message)
         {
             pnlSuccess.Visible = true;
             pnlError.Visible = false;

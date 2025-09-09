@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TawhidPortfolio.DataAccess;
@@ -6,7 +6,7 @@ using TawhidPortfolio.Models;
 
 namespace TawhidPortfolio
 {
-    public partial class ManageBlog : AdminBasePage
+    public partial class ManageBlog : Page
     {
         // Control declarations
         protected Literal litPageTitle;
@@ -19,7 +19,7 @@ namespace TawhidPortfolio
         protected Panel pnlSuccess;
         protected Label lblSuccess;
 
-        private BlogDAL blogDAL = new BlogDAL();
+        private BlogDAL blogDAL = new BlogDAL();  // Changed from BlogPostDAL
         private int blogId = 0;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace TawhidPortfolio
         {
             try
             {
-                Blog blog = blogDAL.GetBlogById(id);
+                Blog blog = blogDAL.GetBlogById(id);  // Changed from BlogPost
                 if (blog != null)
                 {
                     txtTitle.Text = blog.Title;
@@ -82,7 +82,7 @@ namespace TawhidPortfolio
 
                 if (Page.IsValid)
                 {
-                    Blog blog = new Blog
+                    Blog blog = new Blog  // Changed from BlogPost
                     {
                         Title = txtTitle.Text.Trim(),
                         Content = txtContent.Text.Trim(),
@@ -96,12 +96,12 @@ namespace TawhidPortfolio
                     if (ViewState["BlogId"] != null)
                     {
                         blog.Id = Convert.ToInt32(ViewState["BlogId"]);
-                        success = blogDAL.UpdateBlog(blog);
+                        success = blogDAL.UpdateBlog(blog);  // Changed method name
                         message = success ? "Blog post updated successfully!" : "Failed to update blog post.";
                     }
                     else
                     {
-                        int newId = blogDAL.InsertBlog(blog);
+                        int newId = blogDAL.InsertBlog(blog);  // Changed method name
                         success = newId > 0;
                         message = success ? "Blog post added successfully!" : "Failed to add blog post.";
                     }
@@ -124,14 +124,14 @@ namespace TawhidPortfolio
             }
         }
 
-        protected override void ShowError(string message)
+        private void ShowError(string message)
         {
             pnlError.Visible = true;
             pnlSuccess.Visible = false;
             lblError.Text = message;
         }
 
-        protected override void ShowSuccess(string message)
+        private void ShowSuccess(string message)
         {
             pnlSuccess.Visible = true;
             pnlError.Visible = false;

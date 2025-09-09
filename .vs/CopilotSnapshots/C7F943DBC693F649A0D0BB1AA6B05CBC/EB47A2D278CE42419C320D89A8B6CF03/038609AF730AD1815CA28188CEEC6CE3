@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TawhidPortfolio.DataAccess;
@@ -6,15 +6,13 @@ using TawhidPortfolio.Models;
 
 namespace TawhidPortfolio
 {
-    public partial class AdminPanel : AdminBasePage
+    public partial class AdminPanel : Page
     {
         // Control declarations
         protected Label lblProjectCount;
         protected Label lblBlogCount;
         protected Label lblMessageCount;
         protected Label lblActiveProjectCount;
-        protected Label lblCurrentUser;
-        protected Button btnLogout;
         protected GridView gvProjects;
         protected GridView gvBlogs;
         protected GridView gvMessages;
@@ -30,7 +28,7 @@ namespace TawhidPortfolio
         protected Label lblMessageError;
 
         private ProjectDAL projectDAL = new ProjectDAL();
-        private BlogDAL blogDAL = new BlogDAL();
+        private BlogDAL blogDAL = new BlogDAL();  // Changed from BlogPostDAL
         private ContactMessageDAL contactMessageDAL = new ContactMessageDAL();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -39,12 +37,6 @@ namespace TawhidPortfolio
             {
                 if (!IsPostBack)
                 {
-                    // Set current user info
-                    if (lblCurrentUser != null)
-                    {
-                        lblCurrentUser.Text = $"Welcome, {GetCurrentAdminUsername()}";
-                    }
-
                     LoadDashboardData();
                     LoadProjectsData();
                     LoadBlogsData();
@@ -57,11 +49,6 @@ namespace TawhidPortfolio
             }
         }
 
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            LogoutAdmin();
-        }
-
         private void LoadDashboardData()
         {
             try
@@ -70,7 +57,7 @@ namespace TawhidPortfolio
                 
                 var projects = projectDAL.GetAllProjects();
                 var activeProjects = projectDAL.GetActiveProjects();
-                var blogs = blogDAL.GetAllBlogs();
+                var blogs = blogDAL.GetAllBlogs();  // Changed from blogPostDAL
                 var messages = contactMessageDAL.GetAllMessages();
 
                 lblProjectCount.Text = projects.Count.ToString();
@@ -104,7 +91,7 @@ namespace TawhidPortfolio
             try
             {
                 pnlBlogError.Visible = false;
-                var blogs = blogDAL.GetAllBlogs();
+                var blogs = blogDAL.GetAllBlogs();  // Changed from blogPostDAL
                 gvBlogs.DataSource = blogs;
                 gvBlogs.DataBind();
             }
@@ -163,7 +150,7 @@ namespace TawhidPortfolio
                 try
                 {
                     int blogId = Convert.ToInt32(e.CommandArgument);
-                    bool success = blogDAL.DeleteBlog(blogId);
+                    bool success = blogDAL.DeleteBlog(blogId);  // Changed from blogPostDAL
                     
                     if (success)
                     {
@@ -224,12 +211,12 @@ namespace TawhidPortfolio
             LoadMessagesData();
         }
 
-        protected override void ShowSuccess(string message)
+        private void ShowSuccess(string message)
         {
             Response.Write($"<script>alert('{message}');</script>");
         }
 
-        protected override void ShowError(string message)
+        private void ShowError(string message)
         {
             Response.Write($"<script>alert('Error: {message}');</script>");
         }

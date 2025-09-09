@@ -1,0 +1,202 @@
+﻿using System;
+using System.Web;
+using System.Web.UI;
+using TawhidPortfolio.DataAccess;
+using TawhidPortfolio.Models;
+
+namespace TawhidPortfolio
+{
+    public partial class AdminLogin : Page
+    {
+        private AdminDAL adminDAL = new AdminDAL();
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!IsPostBack)
+                {
+                    // Check if user is already logged in
+                    if (IsAdminLoggedIn())
+                    {
+                        Response.Redirect("AdminPanel.aspx");
+                        return;
+                    }
+
+                    // Create initial admin if none exists
+                    adminDAL.CreateInitialAdmin();
+
+                    // Check for remember me cookie
+                    CheckRememberMeCookie();
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Page load error: " + ex.Message);
+            }
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Page.IsValid)
+                    return;
+
+                string username = txtUsername.Text.Trim();
+                string password = txtPassword.Text.Trim();
+
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                {
+                    ShowError("Please enter both username and password.");
+                    return;
+                }
+
+                // Add loading state
+                btnLogin.Text = "Logging in...";
+                btnLogin.CssClass += " loading";
+                btnLogin.Enabled = false;
+
+                // Validate credentials
+                Admin admin = adminDAL.ValidateLogin(username, password);
+
+                if (admin != null)
+                {
+                    // Update last login
+                    adminDAL.UpdateLastLogin(admin.Id);
+
+                    // Create session
+                    Session["AdminId"] = admin.Id;
+                    Session["AdminUsername"] = admin.Username;
+                    Session["AdminEmail"] = admin.Email;
+                    Session["AdminLoginTime"] = DateTime.Now;
+
+                    // Set session timeout to 30 minutes
+                    Session.Timeout = 30;
+
+                    // Handle remember me
+                    if (chkRememberMe.Checked)
+                    {
+                        SetRememberMeCookie(admin.Id, admin.Username);
+                    }
+                    else
+                    {
+                        ClearRememberMeCookie();
+                    }
+
+                    // Log successful login
+                    System.Diagnostics.Debug.WriteLine($"Admin login successful: {username} at {DateTime.Now}");
+
+                    // Redirect to admin panel
+                    Response.Redirect("AdminPanel.aspx");
+                }
+                else
+                {
+                    ShowError("Invalid username or password. Please try again.");
+                    ClearForm();
+                }
+            }
+            catch (Exception ex)
+            {
+                ShowError("Login failed: " + ex.Message);
+                System.Diagnostics.Debug.WriteLine("AdminLogin Error: " + ex.Message);
+            }
+            finally
+            {
+                // Reset button state
+                btnLogin.Text = "Login to Admin Panel";
+                btnLogin.CssClass = "login-button";
+                btnLogin.Enabled = true;
+            }
+        }
+
+        private bool IsAdminLoggedIn()
+        {
+            return Session["AdminId"] != null && Session["AdminUsername"] != null;
+        }
+
+        private void CheckRememberMeCookie()
+        {
+            HttpCookie rememberCookie = Request.Cookies["AdminRememberMe"];
+            if (rememberCookie != null && !string.IsNullOrEmpty(rememberCookie.Value))
+            {
+                try
+                {
+                    string[] cookieValues = rememberCookie.Value.Split('|');
+                    if (cookieValues.Length == 2)
+                    {
+                        int adminId = Convert.ToInt32(cookieValues[0]);
+                        string username = cookieValues[1];
+
+                        // Verify admin still exists and is active
+                        Admin admin = adminDAL.GetAdminById(adminId);
+                        if (admin != null && admin.Username == username)
+                        {
+                            // Auto-login
+                            Session["AdminId"] = admin.Id;
+                            Session["AdminUsername"] = admin.Username;
+                            Session["AdminEmail"] = admin.Email;
+                            Session["AdminLoginTime"] = DateTime.Now;
+                            Session.Timeout = 30;
+
+                            // Update last login
+                            adminDAL.UpdateLastLogin(admin.Id);
+
+                            ShowSuccess("Welcome back! You have been automatically logged in.");
+                            
+                            // Redirect after a brief delay
+                            Response.AddHeader("REFRESH", "2;URL=AdminPanel.aspx");
+                        }
+                        else
+                        {
+                            ClearRememberMeCookie();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("Remember me cookie error: " + ex.Message);
+                    ClearRememberMeCookie();
+                }
+            }
+        }
+
+        private void SetRememberMeCookie(int adminId, string username)
+        {
+            HttpCookie rememberCookie = new HttpCookie("AdminRememberMe");
+            rememberCookie.Value = adminId + "|" + username;
+            rememberCookie.Expires = DateTime.Now.AddDays(7); // Remember for 7 days
+            rememberCookie.HttpOnly = true; // Security: prevent XSS
+            rememberCookie.Secure = Request.IsSecureConnection; // Use HTTPS if available
+            Response.Cookies.Add(rememberCookie);
+        }
+
+        private void ClearRememberMeCookie()
+        {
+            HttpCookie rememberCookie = new HttpCookie("AdminRememberMe");
+            rememberCookie.Expires = DateTime.Now.AddDays(-1); // Expire the cookie
+            Response.Cookies.Add(rememberCookie);
+        }
+
+        private void ClearForm()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            chkRememberMe.Checked = false;
+        }
+
+        private void ShowError(string message)
+        {
+            pnlError.Visible = true;
+            pnlSuccess.Visible = false;
+            lblError.Text = message;
+        }
+
+        private void ShowSuccess(string message)
+        {
+            pnlSuccess.Visible = true;
+            pnlError.Visible = false;
+            lblSuccess.Text = message;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TawhidPortfolio.DataAccess;
@@ -26,6 +26,9 @@ namespace TawhidPortfolio
         {
             try
             {
+                // Call base class Page_Load first for authentication
+                base.OnLoad(e);
+
                 if (!IsPostBack)
                 {
                     // Check if editing existing blog post

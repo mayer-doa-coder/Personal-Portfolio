@@ -68,10 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="AdminLogin.aspx" />
     <Content Include="AdminMessages.aspx" />
     <Content Include="AdminPanel.aspx" />
     <Content Include="BlogsAPI.aspx" />
     <Content Include="ContactAPI.aspx" />
+    <Content Include="Database\AdminAuthSetup.sql" />
     <Content Include="Database\CompleteDbSetup.sql" />
     <Content Include="Database\CreateDatabase.sql" />
     <Content Include="Database\DataRecoveryScript.sql" />
@@ -96,6 +98,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AdminMessages.aspx.cs">
       <DependentUpon>AdminMessages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -112,6 +121,7 @@
       <DependentUpon>ContactAPI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="DataAccess\AdminDAL.cs" />
     <Compile Include="DataAccess\BlogDAL.cs" />
     <Compile Include="DataAccess\BlogPostDAL.cs" />
     <Compile Include="DataAccess\ContactMessageDAL.cs" />
@@ -131,6 +141,7 @@
       <DependentUpon>ManageProject.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Blog.cs" />
     <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\ContactMessage.cs" />
@@ -156,11 +167,14 @@
     <Content Include="DATABASE_FIX_GUIDE.md" />
     <Content Include="DATABASE_SOLUTION_SUMMARY.md" />
     <Content Include="Front_End\FORMSPREE_SETUP.md" />
+    <Content Include="ADMIN_SECURITY_GUIDE.md" />
+    <Content Include="ADMIN_SECURITY_SETUP.md" />
     <None Include="packages.config" />
     <Content Include="README.md" />
     <Content Include="QUICKSTART.md" />
     <Content Include="SSMS_Verification_Guide.md" />
     <Content Include="SCHEMA_SYNC_COMPLETE.md" />
+    <Content Include="STACKOVERFLOW_FIX_COMPLETE.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

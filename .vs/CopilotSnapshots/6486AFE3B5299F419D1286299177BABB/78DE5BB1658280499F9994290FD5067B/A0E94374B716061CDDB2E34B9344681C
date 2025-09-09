@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TawhidPortfolio.DataAccess;
@@ -6,39 +6,44 @@ using TawhidPortfolio.Models;
 
 namespace TawhidPortfolio
 {
-    public partial class ManageBlog : AdminBasePage
+    public partial class ManageProject : AdminBasePage
     {
         // Control declarations
         protected Literal litPageTitle;
         protected TextBox txtTitle;
-        protected TextBox txtContent;
+        protected TextBox txtDescription;
+        protected TextBox txtTechStack;
         protected TextBox txtImageUrl;
+        protected TextBox txtProjectLink;
         protected Button btnSave;
         protected Panel pnlError;
         protected Label lblError;
         protected Panel pnlSuccess;
         protected Label lblSuccess;
 
-        private BlogDAL blogDAL = new BlogDAL();
-        private int blogId = 0;
+        private ProjectDAL projectDAL = new ProjectDAL();
+        private int projectId = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                // Remove the recursive call to base.OnLoad(e)
+                // Authentication is handled automatically by AdminBasePage.OnLoad()
+                
                 if (!IsPostBack)
                 {
-                    // Check if editing existing blog post
-                    if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out blogId))
+                    // Check if editing existing project
+                    if (Request.QueryString["id"] != null && int.TryParse(Request.QueryString["id"], out projectId))
                     {
-                        LoadBlog(blogId);
-                        litPageTitle.Text = "Edit Blog Post";
-                        btnSave.Text = "Update Blog Post";
+                        LoadProject(projectId);
+                        litPageTitle.Text = "Edit Project";
+                        btnSave.Text = "Update Project";
                     }
                     else
                     {
-                        litPageTitle.Text = "Add New Blog Post";
-                        btnSave.Text = "Save Blog Post";
+                        litPageTitle.Text = "Add New Project";
+                        btnSave.Text = "Save Project";
                     }
                 }
             }
@@ -48,27 +53,29 @@ namespace TawhidPortfolio
             }
         }
 
-        private void LoadBlog(int id)
+        private void LoadProject(int id)
         {
             try
             {
-                Blog blog = blogDAL.GetBlogById(id);
-                if (blog != null)
+                Project project = projectDAL.GetProjectById(id);
+                if (project != null)
                 {
-                    txtTitle.Text = blog.Title;
-                    txtContent.Text = blog.Content;
-                    txtImageUrl.Text = blog.ImageUrl;
-                    ViewState["BlogId"] = blog.Id;
+                    txtTitle.Text = project.Title;
+                    txtDescription.Text = project.Description;
+                    txtTechStack.Text = project.TechStack;
+                    txtImageUrl.Text = project.ImageUrl;
+                    txtProjectLink.Text = project.ProjectLink;
+                    ViewState["ProjectId"] = project.Id;
                 }
                 else
                 {
-                    ShowError("Blog post not found.");
+                    ShowError("Project not found.");
                     Response.Redirect("AdminPanel.aspx");
                 }
             }
             catch (Exception ex)
             {
-                ShowError("Error loading blog post: " + ex.Message);
+                ShowError("Error loading project: " + ex.Message);
             }
         }
 
@@ -82,28 +89,30 @@ namespace TawhidPortfolio
 
                 if (Page.IsValid)
                 {
-                    Blog blog = new Blog
+                    Project project = new Project
                     {
                         Title = txtTitle.Text.Trim(),
-                        Content = txtContent.Text.Trim(),
-                        ImageUrl = txtImageUrl.Text.Trim()
+                        Description = txtDescription.Text.Trim(),
+                        TechStack = txtTechStack.Text.Trim(),
+                        ImageUrl = txtImageUrl.Text.Trim(),
+                        ProjectLink = txtProjectLink.Text.Trim()
                     };
 
                     bool success = false;
                     string message = "";
 
-                    // Check if editing existing blog post
-                    if (ViewState["BlogId"] != null)
+                    // Check if editing existing project
+                    if (ViewState["ProjectId"] != null)
                     {
-                        blog.Id = Convert.ToInt32(ViewState["BlogId"]);
-                        success = blogDAL.UpdateBlog(blog);
-                        message = success ? "Blog post updated successfully!" : "Failed to update blog post.";
+                        project.Id = Convert.ToInt32(ViewState["ProjectId"]);
+                        success = projectDAL.UpdateProject(project);
+                        message = success ? "Project updated successfully!" : "Failed to update project.";
                     }
                     else
                     {
-                        int newId = blogDAL.InsertBlog(blog);
+                        int newId = projectDAL.InsertProject(project);
                         success = newId > 0;
-                        message = success ? "Blog post added successfully!" : "Failed to add blog post.";
+                        message = success ? "Project added successfully!" : "Failed to add project.";
                     }
 
                     if (success)
@@ -120,7 +129,7 @@ namespace TawhidPortfolio
             }
             catch (Exception ex)
             {
-                ShowError("Error saving blog post: " + ex.Message);
+                ShowError("Error saving project: " + ex.Message);
             }
         }
 
